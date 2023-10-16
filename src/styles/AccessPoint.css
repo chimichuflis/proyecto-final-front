@@ -1,0 +1,33 @@
+.container-acces {
+  width: 320px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0 24px 0 24px;
+  background-color: #fdfeff;
+  box-shadow: 0 5px 5px black;
+  border: 1px solid black;
+}
+.article {
+  width: 208px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 10px s 15px;
+}
+.article h3 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.article span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #45464b;
+}
+.images {
+  width: 87px;
+  height: 80px;
+  background-color: #26262e;
+  border-radius: 0 0px 0 24px;
+}
