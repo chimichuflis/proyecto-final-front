@@ -1,0 +1,25 @@
+.home-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px 0 20px 0;
+}
+.wrapper-home {
+  padding: 15px;
+  background: linear-gradient(
+    0deg,
+    rgba(253, 254, 255, 0) 25%,
+    rgba(255, 141, 10, 0.055) 75%,
+    rgba(255, 141, 10, 0.178) 100%
+  );
+}
+.container-access {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.icons-home {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}

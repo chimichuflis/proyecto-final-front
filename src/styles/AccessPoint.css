@@ -1,12 +1,11 @@
 .container-acces {
-  width: 320px;
+  flex: 1 1;
   height: 80px;
   display: flex;
   flex-direction: row;
   border-radius: 0 24px 0 24px;
   background-color: #fdfeff;
-  box-shadow: 0 5px 5px black;
-  border: 1px solid black;
+  box-shadow: 2px 2px 5px rgba(82, 80, 80, 0.192);
 }
 .article {
   width: 208px;
@@ -14,11 +13,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 10px 10px s 15px;
+  padding: 0 10px 10px 15px;
 }
 .article h3 {
   font-size: 14px;
   font-weight: 500;
+  color: #26262e;
+  margin-bottom: 5px;
 }
 .article span {
   font-size: 12px;
