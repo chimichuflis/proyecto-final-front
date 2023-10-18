@@ -1,4 +1,4 @@
-import "../../styles/AccessPoint.css";
+import "../styles/AccessPoint.css";
 
 function NavBar() {
   return (

@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import Home from "./pages/home/Home.jsx";
+import MusicMatch from "./pages/musicMatch/MusicMatch.jsx";
 import "./index.css";
 import WelcomePage from "./pages/welcomePage/WelcomePage.jsx";
 // import Login from "./pages/welcomePage/Login.jsx";
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />,
+  },
+  {
+    path: "/match",
+    element: <MusicMatch />,
   },
   // {
   //   path: "/login",
