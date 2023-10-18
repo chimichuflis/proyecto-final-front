@@ -1,0 +1,52 @@
+.match-carousel{
+  position: relative;
+  overflow-x:hidden;
+  background-color: grey;
+  width: 100%;
+  aspect-ratio: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.match-carousel li{
+  position: absolute;
+  width: 40%;
+  aspect-ratio: 1;
+  border: 1px solid red;
+  background-color: white;
+}
+.match-carousel .next-match{
+  left:60%;
+  top:-15%;
+  transform: rotate(20deg);
+  animation: nextmatch 1s infinite;
+}
+.match-carousel .to-match{
+  top: 10%;
+  left: 25%;
+  animation: tomatch 1s infinite;
+}
+.match-carousel .prev-match{
+  left:-100%;
+  animation: prevmatch 1s infinite;
+}
+@keyframes nextmatch{
+  0%{
+    left:200%;
+    transform: rotate(180deg);
+  }
+}
+@keyframes tomatch{
+  0%{
+    left:60%;
+    top:-15%;
+    transform: rotate(20deg);
+  }
+}
+@keyframes prevmatch{
+  0%{
+    top: 10%;
+    left: 25%;
+  }
+}
