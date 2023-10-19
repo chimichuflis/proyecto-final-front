@@ -6,15 +6,31 @@
   align-items: center;
   background: linear-gradient(
     180deg,
-    rgba(253, 254, 255, 0) 25%,
-    rgba(255, 142, 10, 0.13) 84.37%,
-    rgba(255, 142, 10, 0.22) 100%
+    rgba(253, 254, 255, 0.12) 25%,
+    rgba(255, 142, 10, 0.03) 84.37%,
+    rgba(255, 142, 10, 0) 100%
   );
   flex: 1 1;
 }
-.icon img {
+.btn img {
   height: 24px;
   width: 24px;
+}
+.selected img {
+  height: 24px;
+  width: 24px;
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+.selected {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  font-size: 12px;
+  opacity: 1;
 }
 .btn {
   display: flex;
@@ -22,8 +38,5 @@
   gap: 5px;
   align-items: center;
   font-size: 12px;
-}
-.link {
-  text-decoration: none;
-  color: black;
+  opacity: 0.5;
 }
