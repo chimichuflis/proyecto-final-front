@@ -1,5 +1,19 @@
 .page-title{
   display: flex;
-  gap:1rem;
-  padding: 0.5rem;
+  align-items: center;
+}
+.page-title a{
+  display:flex;
+  align-items: center;
+}
+.page-title img{
+  width:24px;
+  height: 24px;
+}
+.page-title h2{
+  font-size: 16px;
+  font-weight: 500;
+  flex-grow: 100;
+  text-align: center;
+  padding-right: 24px;
 }
