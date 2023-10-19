@@ -1,5 +1,7 @@
 import AccessPoint from "../../components/home/AccessPoint";
+
 import NavBar from "../../components/home/NavBar";
+
 import "../../styles/home.css";
 
 function Home() {

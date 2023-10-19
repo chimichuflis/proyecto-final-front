@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
   margin: 60px 15px 20px 15px;
   font-weight: 300;
 }
@@ -19,6 +20,7 @@
   justify-content: flex-start;
   gap: 15px;
   margin: 0 15px 0 15px;
+
 }
 .icons-home {
   display: flex;
@@ -30,3 +32,4 @@
   bottom: 0;
   width: 100vw;
 }
+
