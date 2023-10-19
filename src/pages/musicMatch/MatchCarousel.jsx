@@ -27,9 +27,17 @@ export default function(props){
     }
   },[]);
   return(
-    <ul className="match-carousel">
-      <li className="next-match"><img src={props.next}/></li>
-      <li draggable="true" className="to-match"><img src={props.toMatch}/></li>
-      {props.previous && (<li className="prev-match"><img src={props.previous}/></li>)}
-    </ul>)
+    <section className="match-carousel">
+      <ul>
+        <li className="next-match"><img src={props.next}/></li>
+        <li draggable="true" className="to-match"><img src={props.toMatch}/></li>
+        <li className="prev-match"><img src="#"/></li>
+      </ul>
+      <div>
+        <button>O</button>
+        <button>X</button>
+      </div>
+      <h3>{props.artistName}</h3>
+    </section>
+  )
 }
