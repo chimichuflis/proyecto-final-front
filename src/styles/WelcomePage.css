@@ -1,0 +1,72 @@
+.welcome-page-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.welcome-background {
+    width: 418px;
+    height: 792px;
+    flex-shrink: 0;
+    opacity: 0.5;
+    background: linear-gradient(0deg, #FDFEFF 30%, rgba(253, 254, 255, 0.00), rgba(255, 142, 10, 0.90)), url("../../Gif_Auden.gif"), lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    position: absolute;
+    background-size: 100%;
+    z-index: 0;
+    mix-blend-mode: multiply;
+}
+
+.welcome-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-logo img {
+    width: 207.64px;
+    height: 72px;
+    margin-top: 150px;
+}
+
+.welcome-logo p {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 30.81px;
+    text-align: center;
+    line-height: normal;
+    letter-spacing: -0.794px;
+    font-style: normal;
+}
+
+.welcome-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    gap: 32px;
+}
+
+.welcome-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background: transparent;
+}
+
+/* .bottom-gradient {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 368px;
+    height: 338px;
+    flex-shrink: 0;
+    background: linear-gradient(0deg, #FDFEFF 30%, rgba(253, 254, 255, 0.00), #FDFEFF 100%, orange);
+    position: absolute;
+    z-index: 1;
+} */

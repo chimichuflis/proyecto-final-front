@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import Home from "./pages/home/Home.jsx";
 import MusicMatch from "./pages/musicMatch/MusicMatch.jsx";
 import "./index.css";
+import WelcomePage from "./pages/welcomePage/WelcomePage.jsx";
 // import Login from "./pages/welcomePage/Login.jsx";
 // import Register from "./pages/welcomePage/Register.jsx";
 // import Search from "./pages/search/Search.jsx";
@@ -13,10 +14,10 @@ import "./index.css";
 // import Settings from "./pages/profile/Settings.jsx";
 
 const router = createBrowserRouter([
-  // {
-  //   path: "/",
-  //   element: <WelcomePage />,
-  // },
+  {
+    path: "/",
+    element: <WelcomePage />,
+  },
 
   {
     path: "/home",
