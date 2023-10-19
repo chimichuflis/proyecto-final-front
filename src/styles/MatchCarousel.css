@@ -1,7 +1,6 @@
 .match-carousel{
   position: relative;
   overflow-x:hidden;
-  background-color: grey;
   width: 100%;
   aspect-ratio: 2;
   display: flex;
@@ -20,16 +19,16 @@
   left:60%;
   top:-15%;
   transform: rotate(20deg);
-  animation: nextmatch 1s infinite;
+  animation: nextmatch 1s;
 }
 .match-carousel .to-match{
   top: 10%;
   left: 25%;
-  animation: tomatch 1s infinite;
+  animation: tomatch 1s;
 }
 .match-carousel .prev-match{
   left:-100%;
-  animation: prevmatch 1s infinite;
+  animation: prevmatch 1s;
 }
 @keyframes nextmatch{
   0%{
