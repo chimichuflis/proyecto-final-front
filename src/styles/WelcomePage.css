@@ -8,7 +8,7 @@
     height: 792px;
     flex-shrink: 0;
     opacity: 0.5;
-    background: linear-gradient(0deg, #FDFEFF 30%, rgba(253, 254, 255, 0.00), rgba(255, 142, 10, 0.90)), url("../../public/Gif_Auden.gif"), lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, #FDFEFF 30%, rgba(253, 254, 255, 0.00), rgba(255, 142, 10, 0.90)), url("../../Gif_Auden.gif"), lightgray 50% / cover no-repeat;
     background-repeat: no-repeat;
     pointer-events: none;
     mix-blend-mode: multiply;
@@ -57,63 +57,6 @@
     align-items: center;
     gap: 16px;
     background: transparent;
-}
-
-.orange-button {
-    display: flex;
-    width: 320px;
-    padding: 12px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    border-radius: 0px 16px;
-    background: var(--Primario, #FF8E0A);
-    z-index: 1;
-    border: none;
-    color: var(--Blanco, #FDFEFF);
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.5px;
-}
-
-.border-trans-button {
-    display: flex;
-    width: 320px;
-    padding: 12px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    border-radius: 0px 16px;
-    border: 2px solid var(--medios-tonos-gris-5, #26262E);
-    color: var(--medios-tonos-gris-5, #26262E);
-    text-align: center;
-    font-family: Rubik;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.5px;
-}
-
-.trans-button {
-    display: flex;
-    width: 320px;
-    padding: 12px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    border-radius: 0px 16px;
-    color: var(--medios-tonos-gris-5, #26262E);
-    text-align: center;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.5px;
-    border: none;
 }
 
 /* .bottom-gradient {

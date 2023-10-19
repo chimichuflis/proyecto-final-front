@@ -1,3 +1,6 @@
+import BorderTransButton from "../../components/reusable/BorderTransButton";
+import OrangeButton from "../../components/reusable/OrangeButton";
+import TransButton from "../../components/reusable/TransButton";
 import "../../styles/WelcomePage.css";
 
 function WelcomePage() {
@@ -17,24 +20,14 @@ function WelcomePage() {
                 </div>
                 <div className="welcome-buttons-container">
                     <div className="welcome-buttons">
-                        <button className="orange-button">
-                            Registrarse Gratis
-                        </button>
-                        <button className="border-trans-button">
-                            <img src="../google-logo.svg" alt="" />
-                            Continuar con google
-                        </button>
-                        <button className="border-trans-button">
-                            <img src="../apple-logo.svg" alt="" />
-                            Continuar con Apple
-                        </button>
+                        <OrangeButton txt="Registrarse Gratis" />
+                        <BorderTransButton img="../google-logo.svg" txt="Continuar con google" />
+                        <BorderTransButton img="../apple-logo.svg" txt="Continuar con Apple" />
                     </div>
-                    <button className="trans-button">
-                        Iniciar Sesión
-                    </button>
+                    <TransButton txt="Iniciar Sesión" />
                 </div>
                 <div className="bottom-gradient"></div>
-            </div>
+            </div >
 
         </>
     );
