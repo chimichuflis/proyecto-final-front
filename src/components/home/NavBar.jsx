@@ -9,10 +9,14 @@ function NavBar() {
     <div className="container-nav">
       <div>
         <Link className="link" to={"/home/"}>
-          <div className={location.pathname == "/home/" ? "selected" : "btn"}>
+          <div
+            className={
+              location.pathname.indexOf("home") >= 0 ? "selected" : "btn"
+            }
+          >
             <img
               src={
-                location.pathname == "/home/"
+                location.pathname.indexOf("home") >= 0
                   ? "../../public/home-black.svg"
                   : "../../public/home.svg"
               }
@@ -22,7 +26,7 @@ function NavBar() {
         </Link>
       </div>
       <div>
-        <Link className="link" to={"/search/"}>
+        <Link className="link" to={"/match/"}>
           <div className={location.pathname == "/search/" ? "selected" : "btn"}>
             <img
               src={
