@@ -1,4 +1,4 @@
-import "../../styles/OrangeButton.css"
+import "../styles/OrangeButton.css"
 
 function OrangeButton(props) {
     return (

@@ -1,4 +1,4 @@
-import "../../styles/TransButton.css"
+import "../styles/TransButton.css"
 
 function TransButton(props) {
     return (

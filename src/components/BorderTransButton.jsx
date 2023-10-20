@@ -1,4 +1,4 @@
-import "../../styles/BorderTransButton.css"
+import "../styles/BorderTransButton.css"
 
 function BorderTransButton(props) {
     return (

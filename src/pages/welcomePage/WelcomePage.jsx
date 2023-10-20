@@ -1,6 +1,6 @@
-import BorderTransButton from "../../components/reusable/BorderTransButton";
-import OrangeButton from "../../components/reusable/OrangeButton";
-import TransButton from "../../components/reusable/TransButton";
+import BorderTransButton from "../../components/BorderTransButton";
+import OrangeButton from "../../components/OrangeButton";
+import TransButton from "../../components/TransButton";
 import "../../styles/WelcomePage.css";
 
 function WelcomePage() {
