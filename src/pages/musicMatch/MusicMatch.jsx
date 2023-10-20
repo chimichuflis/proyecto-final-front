@@ -14,6 +14,6 @@ export default function(){
     <div className="music-match gradient-top">
       <PageTitle title="Cupido Musical"/>
       <MatchCarousel next={`artists/${artistArr[0]}`} toMatch={`artists/${artistArr[1]}`} artistName={"Olivia Rodrigo"}/>
-      <button>Crear Playlist</button>
+      <button className="playlistbtn">Crear Playlist</button>
     </div>)
 }
