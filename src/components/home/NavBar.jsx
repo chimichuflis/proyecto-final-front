@@ -1,37 +1,69 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import "../../styles/NavBar.css";
 
 function NavBar() {
+  const location = useLocation();
+  console.log(location.pathname);
   return (
     <div className="container-nav">
-      <div className="icon">
-        <Link className="link" to={"/"}>
-          <div className="btn">
-            <img src="../../public/home.svg" alt="" />
+      <div>
+        <Link className="link" to={"/home/"}>
+          <div className={location.pathname == "/home/" ? "selected" : "btn"}>
+            <img
+              src={
+                location.pathname == "/home/"
+                  ? "../../public/home-black.svg"
+                  : "../../public/home.svg"
+              }
+            />
             <span>Inicio</span>
           </div>
         </Link>
       </div>
-      <div className="icon">
-        <Link className="link" to={"/search"}>
-          <div className="btn">
-            <img src="../../public/search.svg" alt="" />
+      <div>
+        <Link className="link" to={"/search/"}>
+          <div className={location.pathname == "/search/" ? "selected" : "btn"}>
+            <img
+              src={
+                location.pathname == "/search/"
+                  ? "../../public/search-black.svg"
+                  : "../../public/search.svg"
+              }
+            />
             <span>Buscador</span>
           </div>
         </Link>
       </div>
-      <div className="icon">
-        <Link className="link" to={"/profile"}>
-          <div className="btn">
-            <img src="../../public/user.svg" alt="" />
+      <div>
+        <Link className="link" to={"/profile/"}>
+          <div
+            className={location.pathname == "/profile/" ? "selected" : "btn"}
+          >
+            <img
+              src={
+                location.pathname == "/profile/"
+                  ? "../../public/user-black.svg"
+                  : "../../public/user.svg"
+              }
+            />
             <span>Perfil</span>
           </div>
         </Link>
       </div>
-      <div className="icon">
-        <Link className="link" to={"/"}>
-          <div className="btn">
-            <img src="../../public/friends.svg" alt="" />
+      <div>
+        <Link className="link" to={"/friends/"}>
+          <div
+            className={location.pathname === "/friends/" ? "selected" : "btn"}
+          >
+            <img
+              src={
+                location.pathname == "/friends/"
+                  ? "../../public/friends-black.svg"
+                  : "../../public/friends.svg"
+              }
+              alt=""
+            />
             <span>Amigos</span>
           </div>
         </Link>
