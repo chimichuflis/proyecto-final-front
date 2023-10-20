@@ -10,33 +10,60 @@ function NavBar() {
       <div>
         <Link className="link" to={"/home/"}>
           <div className={location.pathname == "/home/" ? "selected" : "btn"}>
-            <img src="../../public/home.svg" alt="" />
+            <img
+              src={
+                location.pathname == "/home/"
+                  ? "../../public/home-black.svg"
+                  : "../../public/home.svg"
+              }
+            />
             <span>Inicio</span>
           </div>
         </Link>
       </div>
       <div>
-        <Link className="link" to={"/match/"}>
-          <div className={location.pathname == "/match/" ? "selected" : "btn"}>
-            <img src="../../public/search.svg" alt="" />
+        <Link className="link" to={"/search/"}>
+          <div className={location.pathname == "/search/" ? "selected" : "btn"}>
+            <img
+              src={
+                location.pathname == "/search/"
+                  ? "../../public/search-black.svg"
+                  : "../../public/search.svg"
+              }
+            />
             <span>Buscador</span>
           </div>
         </Link>
       </div>
-      <div className={location.pathname === "/profile" ? "selected" : ""}>
-        <Link className="link" to={"/profile"}>
-          <div className="btn">
-            <img src="../../public/user.svg" alt="" />
+      <div>
+        <Link className="link" to={"/profile/"}>
+          <div
+            className={location.pathname == "/profile/" ? "selected" : "btn"}
+          >
+            <img
+              src={
+                location.pathname == "/profile/"
+                  ? "../../public/user-black.svg"
+                  : "../../public/user.svg"
+              }
+            />
             <span>Perfil</span>
           </div>
         </Link>
       </div>
       <div>
-        <Link className="link" to={"/"}>
+        <Link className="link" to={"/friends/"}>
           <div
-            className={location.pathname === "/friends" ? "selected" : "btn"}
+            className={location.pathname === "/friends/" ? "selected" : "btn"}
           >
-            <img src="../../public/friends.svg" alt="" />
+            <img
+              src={
+                location.pathname == "/friends/"
+                  ? "../../public/friends-black.svg"
+                  : "../../public/friends.svg"
+              }
+              alt=""
+            />
             <span>Amigos</span>
           </div>
         </Link>
