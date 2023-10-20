@@ -34,8 +34,8 @@ export default function(props){
         <li className="prev-match"><img src="#"/></li>
       </ul>
       <div>
-        <button>O</button>
-        <button>X</button>
+        <button><img src="./like.svg"/></button>
+        <button><img src="./cross.svg"/></button>
       </div>
       <h3>{props.artistName}</h3>
     </section>
