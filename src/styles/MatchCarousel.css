@@ -1,3 +1,7 @@
+.match-carousel{
+  max-width: 480px;
+  margin: 0 auto;
+}
 .match-carousel ul{
   list-style: none;
   position: relative;
