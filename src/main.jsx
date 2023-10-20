@@ -6,7 +6,7 @@ import Home from "./pages/home/Home.jsx";
 import MusicMatch from "./pages/musicMatch/MusicMatch.jsx";
 import "./index.css";
 import WelcomePage from "./pages/welcomePage/WelcomePage.jsx";
-// import Login from "./pages/welcomePage/Login.jsx";
+import Login from "./pages/welcomePage/Login.jsx";
 // import Register from "./pages/welcomePage/Register.jsx";
 // import Search from "./pages/search/Search.jsx";
 // import Profile from "./pages/profile/Profile.jsx";
@@ -27,10 +27,10 @@ const router = createBrowserRouter([
     path: "/match",
     element: <MusicMatch />,
   },
-  // {
-  //   path: "/login",
-  //   element: <Login />,
-  // },
+  {
+    path: "/login",
+    element: <Login />,
+  },
   // {
   //   path: "/register",
   //   element: <Register />,
