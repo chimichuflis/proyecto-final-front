@@ -1,3 +1,7 @@
+.match-carousel{
+  max-width: 480px;
+  margin: 0 auto;
+}
 .match-carousel ul{
   list-style: none;
   position: relative;
@@ -23,12 +27,12 @@
   transform: rotate(10.45deg) scale(0.75);
   opacity: 0.5;
   z-index: -10;
-  animation: nextmatch 1s;
+  animation: nextmatch 2s;
 }
 .match-carousel .to-match{
   top: 0;
   left: 0;
-  animation: tomatch 1s;
+  animation: tomatch 2s;
 }
 .match-carousel .prev-match{
   right: 200%;
@@ -56,9 +60,15 @@
 }
 .match-carousel div button{
   border-radius: 50%;
+  padding: 16px;
+  border: none;
   background-color: #fdfeff;
   color: black;
   box-shadow: 1.77778px 1.77778px 3.55556px 0px rgba(8, 8, 17, 0.08), 0px 0px 5.33333px 0px rgba(8, 8, 17, 0.04);
+}
+.match-carousel div button img{
+  width: 32px;
+
 }
 .match-carousel h3{
   margin-top: 24px;

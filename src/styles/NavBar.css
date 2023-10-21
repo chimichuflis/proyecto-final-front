@@ -12,9 +12,25 @@
   );
   flex: 1 1;
 }
-.icon img {
+.btn img {
   height: 24px;
   width: 24px;
+}
+.selected img {
+  height: 24px;
+  width: 24px;
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+.selected {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  font-size: 12px;
+  opacity: 1;
 }
 .btn {
   display: flex;
@@ -22,8 +38,5 @@
   gap: 5px;
   align-items: center;
   font-size: 12px;
-}
-.link {
-  text-decoration: none;
-  color: black;
+  opacity: 0.5;
 }
