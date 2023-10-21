@@ -1,6 +1,7 @@
 .trans-button {
     display: flex;
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     padding: 12px 16px;
     justify-content: center;
     align-items: center;
@@ -16,4 +17,8 @@
     border: none;
     font-family: Rubik;
     background-color: transparent;
+}
+
+.trans-button-txt {
+    text-decoration: none;
 }

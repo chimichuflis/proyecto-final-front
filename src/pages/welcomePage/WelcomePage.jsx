@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BorderTransButton from "../../components/BorderTransButton";
 import OrangeButton from "../../components/OrangeButton";
 import TransButton from "../../components/TransButton";
@@ -24,7 +25,7 @@ function WelcomePage() {
                         <BorderTransButton img="../google-logo.svg" txt="Continuar con google" />
                         <BorderTransButton img="../apple-logo.svg" txt="Continuar con Apple" />
                     </div>
-                    <TransButton txt="Iniciar Sesión" />
+                    <Link to="/login" className="trans-button-txt"><TransButton txt="Iniciar Sesión" /></Link>
                 </div>
                 <div className="bottom-gradient"></div>
             </div >

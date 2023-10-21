@@ -1,16 +1,19 @@
-.page-title{
+.page-title {
   display: flex;
   align-items: center;
 }
-.page-title a{
-  display:flex;
+
+.page-title a {
+  display: flex;
   align-items: center;
 }
-.page-title img{
-  width:24px;
+
+.page-title img {
+  width: 24px;
   height: 24px;
 }
-.page-title h2{
+
+.page-title h2 {
   font-size: 16px;
   font-weight: 500;
   flex-grow: 100;
