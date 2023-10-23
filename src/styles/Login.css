@@ -1,0 +1,32 @@
+.login-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 24px 24px 24px;
+}
+
+.login-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.login-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin-top: 98px;
+}
+
+.login-email-input {
+    width: 100%;
+}
+
+.login-pass-input {
+    width: 100%;
+}
