@@ -1,0 +1,40 @@
+.song-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 152px;
+}
+.song-wrapper img {
+  width: 152px;
+  height: 152px;
+}
+.song-wrapper div {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.song-wrapper span {
+  font-size: 12px;
+}
+.song-artist {
+  color: #838486;
+}
+
+@media (max-width: 368px) {
+  .song-wrapper img {
+    width: 130px;
+    height: 130px;
+  }
+  .song-wrapper {
+    width: 130px;
+  }
+}
+@media (max-width: 315px) {
+  .song-wrapper img {
+    width: 100px;
+    height: 100px;
+  }
+  .song-wrapper {
+    width: 100px;
+  }
+}

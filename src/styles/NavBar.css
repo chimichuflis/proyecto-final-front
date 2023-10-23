@@ -6,11 +6,12 @@
   align-items: center;
   background: linear-gradient(
     180deg,
-    rgba(253, 254, 255, 0) 25%,
-    rgba(255, 142, 10, 0.13) 84.37%,
-    rgba(255, 142, 10, 0.22) 100%
+    rgb(253, 254, 255) 25%,
+    rgb(248, 226, 200) 84.37%,
+    rgb(253, 214, 170) 100%
   );
   flex: 1 1;
+  z-index: 2;
 }
 .btn img {
   height: 24px;
@@ -39,4 +40,9 @@
   align-items: center;
   font-size: 12px;
   opacity: 0.5;
+}
+.nav-end {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
 }

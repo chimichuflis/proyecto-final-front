@@ -6,7 +6,7 @@ function NavBar() {
   const location = useLocation();
   console.log(location.pathname);
   return (
-    <div className="container-nav">
+    <div className="container-nav nav-end">
       <div>
         <Link className="link" to={"/home/"}>
           <div
@@ -26,11 +26,11 @@ function NavBar() {
         </Link>
       </div>
       <div>
-        <Link className="link" to={"/match/"}>
-          <div className={location.pathname == "/search/" ? "selected" : "btn"}>
+        <Link className="link" to={"/search"}>
+          <div className={location.pathname == "/search" ? "selected" : "btn"}>
             <img
               src={
-                location.pathname == "/search/"
+                location.pathname == "/search"
                   ? "../../public/search-black.svg"
                   : "../../public/search.svg"
               }

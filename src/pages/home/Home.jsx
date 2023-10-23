@@ -21,7 +21,7 @@ function Home() {
         />
         <AccessPoint
           title="Musica Contextual"
-          text="Creamos la playlist perfecta para cualquier situcion"
+          text="Creamos la playlist perfecta para cualquier situacion"
         />
       </div>
       <nav className="nav-end">

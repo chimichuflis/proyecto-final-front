@@ -8,7 +8,7 @@ import "./index.css";
 import WelcomePage from "./pages/welcomePage/WelcomePage.jsx";
 import Login from "./pages/welcomePage/Login.jsx";
 // import Register from "./pages/welcomePage/Register.jsx";
-// import Search from "./pages/search/Search.jsx";
+import Search from "./pages/search/Search.jsx";
 // import Profile from "./pages/profile/Profile.jsx";
 // import Playlists from "./pages/profile/Playlists.jsx";
 // import Settings from "./pages/profile/Settings.jsx";
@@ -35,10 +35,10 @@ const router = createBrowserRouter([
   //   path: "/register",
   //   element: <Register />,
   // },
-  // {
-  //   path: "/search",
-  //   element: <Search />,
-  // },
+  {
+    path: "/search",
+    element: <Search />,
+  },
   // {
   //   path: "/profile",
   //   element: <Profile />,
