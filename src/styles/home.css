@@ -3,10 +3,13 @@
   flex-direction: row;
   justify-content: space-between;
 
-  margin: 60px 15px 20px 15px;
+  margin: 0 24px 20px 24px;
   font-weight: 300;
 }
-.home-heade h1 {
+.home-header {
+  padding-top: 48px;
+}
+.home-header h1 {
   font-size: 26px;
 }
 .wrapper-home {
@@ -19,17 +22,10 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 15px;
-  margin: 0 15px 0 15px;
-
+  margin: 0 24px 0 24px;
 }
 .icons-home {
   display: flex;
   flex-direction: row;
-  gap: 5px;
+  gap: 10px;
 }
-.nav-end {
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-}
-
