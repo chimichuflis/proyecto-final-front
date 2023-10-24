@@ -27,10 +27,8 @@ function Search() {
             <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
             <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
             <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
-            <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
-            <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
-            <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
           </div>
+          <div className="recents-container"></div>
         </main>
       </div>
       <NavBar />
