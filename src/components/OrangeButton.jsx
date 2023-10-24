@@ -2,11 +2,9 @@ import "../styles/OrangeButton.css"
 
 function OrangeButton(props) {
     return (
-        <>
-            <button className="orange-button">
-                <span>{props.txt}</span>
-            </button>
-        </>
+        <button disabled={props.isdisabled} className="orange-button">
+            <span>{props.txt}</span>
+        </button>
     );
 }
 

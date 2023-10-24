@@ -19,3 +19,7 @@
     letter-spacing: 0.5px;
     font-family: Rubik;
 }
+
+.orange-button:disabled {
+    background: #E4E6E8;
+}
