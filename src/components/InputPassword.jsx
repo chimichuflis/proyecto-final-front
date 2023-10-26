@@ -7,6 +7,7 @@ import { useState } from "react";
 function InputPassword(props) {
     const validation = (e) => {
         props.validation(e.target.value.length > 7)
+        props.setter(e.target.value)
     }
     const [showPassword, setShowPassword] = useState(false)
     const OpenEye = () => {
