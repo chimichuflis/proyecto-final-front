@@ -2,7 +2,8 @@ import "../styles/Input.css"
 
 function Input(props) {
     const validation = (e) => {
-        props.validation(e.target.validity.valid)
+        props.validation(e.target.validity.valid && !!e.target.value)
+        props.setter(e.target.value)
     }
 
     return (

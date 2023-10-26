@@ -21,7 +21,7 @@ function WelcomePage() {
                 </div>
                 <div className="welcome-buttons-container">
                     <div className="welcome-buttons">
-                        <OrangeButton txt="Registrarse Gratis" />
+                        <Link to="/register" className="trans-button-txt"><OrangeButton txt="Registrarse Gratis" /></Link>
                         <BorderTransButton img="../google-logo.svg" txt="Continuar con google" />
                         <BorderTransButton img="../apple-logo.svg" txt="Continuar con Apple" />
                     </div>

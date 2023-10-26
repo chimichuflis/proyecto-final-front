@@ -1,12 +1,13 @@
-.login-container {
+.register-container {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 24px 24px 24px 24px;
+    justify-content: space-between;
 }
 
-.login-input-container {
+.register-input-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,23 +16,18 @@
     margin-top: 32px;
 }
 
-.login-button-container {
+.register-button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    margin-top: 98px;
 }
 
-.login-email-input {
+.register-email-input {
     width: 100%;
 }
 
-.login-pass-input {
-    width: 100%;
-}
-
-.login-pass-input p {
+.register-email-input p {
     width: 320px;
     margin: 12px auto;
     align-self: stretch;
@@ -42,4 +38,20 @@
     font-weight: 500;
     line-height: 18px;
     letter-spacing: 0.5px;
+}
+
+.register-pass-input {
+    width: 100%;
+}
+
+.register-span {
+    color: var(--medios-tonos-gris-5, #26262E);
+    text-align: center;
+    font-family: Rubik;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+    margin-top: 32px;
 }
