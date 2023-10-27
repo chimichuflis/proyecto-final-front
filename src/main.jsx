@@ -7,7 +7,7 @@ import "./index.css";
 import WelcomePage from "./pages/welcomePage/WelcomePage.jsx";
 import Login from "./pages/welcomePage/Login.jsx";
 import Register from "./pages/welcomePage/Register.jsx";
-import Search from "./pages/search/Search.jsx";
+import { Search } from "./pages/search/Search.jsx";
 import RegisterConf from "./pages/welcomePage/RegisterConf.jsx";
 import Recovery from "./pages/welcomePage/Recovery.jsx";
 // import Profile from "./pages/profile/Profile.jsx";

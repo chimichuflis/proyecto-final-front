@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "../../styles/SortButton.css";
 
-export default function SortButton(
+export default function SortButton({
   onSort,
   tops,
   songs,
   albums,
   artists,
-  playlists
-) {
+  playlists,
+}) {
   const [ButtonActive, SetButtonActive] = useState(false);
 
   const handleSortByTop = () => {

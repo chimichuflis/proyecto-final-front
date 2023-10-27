@@ -1,54 +1,59 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SearchBar from "../../components/search/SearchBar";
 import "../../styles/search.css";
 import NavBar from "../../components/home/NavBar";
-import Songs from "../../components/search/Songs";
 import SearchResult from "../../components/search/SearchResult";
+import { songs } from "../../API/Rule_Songs";
+import TopTwenty from "../../components/search/TopTwenty";
 
-function Search() {
-  const [move, setMove] = useState(false);
+export const Search = () => {
+  // const [move, setMove] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const [items, setItems] = useState([]);
   const [foundItems, setFoundItems] = useState([]);
 
-  const handdleClick = () => {
-    setMove(true);
-  };
+  useEffect(() => {
+    const getSongs = async () => {
+      try {
+        const response = await songs();
+        setItems(response);
+        setFoundItems(response);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getSongs();
+  }, []);
+
+  // const handdleClick = () => {
+  //   setMove(true);
+  // };
 
   const handleSearch = (value) => {
     setSearchTerm(value);
     const filteredItems = items.filter(
       (item) =>
-        item.name.toLowerCase().includes(value.toLowerCase()) ||
-        (value !== "" && item.name.includes(value))
+        item.song_name.includes(value.toUpperCase()) ||
+        (value !== "" && item.song_name.includes(value.toUpperCase()))
     );
     setFoundItems(filteredItems);
+    console.log(filteredItems);
   };
 
   return (
     <div className="wrapper-search gradient-top">
       <div className="search-container">
         <header className="header-search">
-          {move ? null : <h1>Buscador</h1>}
-          <SearchBar OnClick={handdleClick} />
+          <h1>Buscador</h1>
+          <SearchBar handleSearch={handleSearch} resetSearch={setFoundItems} />
         </header>
-        <main>
-          {/* <div className="subtitle-search">
-            <h4>Top 20s</h4>
-            <div className="line"></div>
-          </div>
-          <div className="songs-container">
-            <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
-            <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
-            <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
-            <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
-            <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
-          </div>
-          <div className="recents-container"></div> */}
+        <main className="main-search">
+          <TopTwenty />
+          <div className="recents-container"></div>
           <SearchResult foundItems={foundItems} />
         </main>
       </div>
       <NavBar />
     </div>
   );
-}
-export default Search;
+};
