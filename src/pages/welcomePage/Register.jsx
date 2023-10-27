@@ -10,11 +10,15 @@ function Register() {
     const [emailOk, setEmailOk] = useState(false)
     const [email, setEmail] = useState("");
     const [emailMsg, setEmailMsg] = useState("");
+    const [emailValid, setEmailValid] = useState(false);
     const navigate = useNavigate();
     useEffect(() => {
         async function availableEmail() {
             try {
                 const response = await available(email)
+                setEmailValid(response.validity)
+                setEmailMsg(response.msg)
+                console.log(response)
             }
             catch (err) { console.log(err) }
         }
@@ -35,13 +39,17 @@ function Register() {
                     <div className="register-input-container">
                         <div className="register-email-input">
                             <Input setter={setEmail} validation={setEmailOk} name="Correo electrónico:" type="email" placeholder="example@email.com" />
+                            <p className={emailValid ? "valid-email" : "invalid-email"}>{
+                                emailValid ? "Email disponible" : emailMsg
+                            }
+                            </p>
                             <p>Deberás poder confirmarlo luego.</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="register-button-container">
-                    <OrangeButton postLogin={registerEmail} isdisabled={!emailOk} txt="Continuar" />
+                    <OrangeButton postLogin={registerEmail} isdisabled={!(emailOk && emailValid)} txt="Continuar" />
                 </div>
             </div>
         </>

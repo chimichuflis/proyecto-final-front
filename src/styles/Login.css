@@ -15,12 +15,29 @@
     margin-top: 32px;
 }
 
+.register-conf-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+    margin-top: 20px;
+}
+
 .login-button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
     margin-top: 98px;
+}
+
+.register-conf-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin-top: 17px;
 }
 
 .login-email-input {
@@ -42,4 +59,63 @@
     font-weight: 500;
     line-height: 18px;
     letter-spacing: 0.5px;
+}
+
+.checkbox-span {
+    color: #26262E;
+    font-family: Rubik;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+}
+
+.a-span {
+    color: #FF8E0A;
+    font-family: Rubik;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.register-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 5px;
+    justify-content: center;
+}
+
+.register-checkbox-input-outside {
+    width: 22px;
+    height: 22px;
+    border-radius: 0px 8px;
+    border: 3px solid #BFC0C1;
+}
+
+.register-checkbox-input-inside {
+    appearance: none;
+}
+
+.register-checkbox-input-inside::after {
+    content: "✔";
+    display: flex;
+    transition: 0.2s;
+    border: none;
+    color: transparent;
+    font-size: 24px;
+    height: 14px;
+    width: 14px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 8px;
+}
+
+.register-checkbox-input-inside:checked::after {
+    color: green;
+
 }

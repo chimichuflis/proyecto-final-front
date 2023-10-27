@@ -7,10 +7,10 @@
     align-items: center;
     gap: 12px;
     border-radius: 0px 16px;
-    background: var(--Primario, #FF8E0A);
+    background: #FF8E0A;
     z-index: 1;
     border: none;
-    color: var(--Blanco, #FDFEFF);
+    color: #FDFEFF;
     text-align: center;
     font-size: 16px;
     font-style: normal;

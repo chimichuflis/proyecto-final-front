@@ -1,8 +1,8 @@
 import API from "./API_rules";
 
-export const login = async (email, password) => {
+export const login = async (profile, password) => {
     let url = "/user/login";
-    return await API.post(url, { email: email, password: password })
+    return await API.post(url, { profile: profile, password: password })
         .then((resultado) => {
             return resultado.data;
         })

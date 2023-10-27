@@ -21,11 +21,13 @@ function WelcomePage() {
                 </div>
                 <div className="welcome-buttons-container">
                     <div className="welcome-buttons">
-                        <Link to="/register" className="trans-button-txt"><OrangeButton txt="Registrarse Gratis" /></Link>
+                        <Link to="/register" className="trans-button-txt link-orange-button"><OrangeButton txt="Registrarse Gratis" /></Link>
                         <BorderTransButton img="../google-logo.svg" txt="Continuar con google" />
                         <BorderTransButton img="../apple-logo.svg" txt="Continuar con Apple" />
                     </div>
-                    <Link to="/login" className="trans-button-txt"><TransButton txt="Iniciar Sesión" /></Link>
+                    <div className="welcome-login">
+                        <Link to="/login" className="trans-button-txt link-trans-button"><TransButton txt="Iniciar Sesión" /></Link>
+                    </div>
                 </div>
                 <div className="bottom-gradient"></div>
             </div >

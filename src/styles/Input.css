@@ -9,7 +9,7 @@
 .input-label {
     display: flex;
     flex-direction: column;
-    color: var(--medios-tonos-gris-5, #26262E);
+    color: #26262E;
     font-family: Rubik;
     font-size: 20px;
     font-style: normal;
@@ -22,7 +22,7 @@
 
 .input-outside {
     border-radius: 0px 16px;
-    border: 2px solid var(--Primario, #E4E6E8);
+    border: 2px solid #E4E6E8;
     height: 48px;
     width: 100%;
     max-width: 320px;

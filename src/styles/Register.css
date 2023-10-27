@@ -55,3 +55,11 @@
     letter-spacing: 0.5px;
     margin-top: 32px;
 }
+
+.invalid-email.invalid-email {
+    color: red;
+}
+
+.valid-email.valid-email {
+    color: green;
+}

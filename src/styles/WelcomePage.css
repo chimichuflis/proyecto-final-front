@@ -62,3 +62,43 @@
     gap: 16px;
     background: transparent;
 }
+
+.link-orange-button {
+    display: flex;
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 16px;
+    background: #FF8E0A;
+    z-index: 1;
+    border: none;
+    color: #FDFEFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    font-family: Rubik;
+}
+
+.link-trans-button {
+    display: flex;
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border-radius: 0px 16px;
+    color: #26262E;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    border: none;
+    font-family: Rubik;
+    background-color: transparent;
+}
