@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/SearchBar.css";
 
-function SearchBar(handleSearch, resetSearch, handdleClick) {
+function SearchBar({ handleSearch, resetSearch, handdleClick }) {
   const [searchTerm, setSearchTerm] = useState("");
   const handleSearchChange = (value) => {
     setSearchTerm(value);
@@ -9,7 +9,7 @@ function SearchBar(handleSearch, resetSearch, handdleClick) {
   };
   const handleClearButton = (event) => {
     setSearchTerm("");
-    resetsearch([]);
+    resetSearch([]);
   };
   return (
     <div onClick={handdleClick} className="input-search">

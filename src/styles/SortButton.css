@@ -1,0 +1,27 @@
+.sort-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  border: 1.5px solid #26262e;
+  border-radius: 0 12px 0 12px;
+  padding: 6px 8px;
+  width: fit-content;
+}
+.sort-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 24px 0 12px 0;
+}
+.sort-btn-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  border: 1.5px solid #26262e;
+  border-radius: 0 12px 0 12px;
+  padding: 6px 8px;
+  width: fit-content;
+  background-color: orange;
+}

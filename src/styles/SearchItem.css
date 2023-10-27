@@ -1,0 +1,32 @@
+.wrapper-item {
+  display: flex;
+  align-items: center;
+  flex: 1 1;
+}
+.img-item img {
+  height: 48px;
+  width: 48px;
+}
+.wrapper-title-artist {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+.wrapper-title-artist h4 {
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.subtitle-item {
+  color: #838486;
+  font-size: 12px;
+  display: flex;
+}
+.name1-item {
+  padding-right: 5px;
+}
+.border-left {
+  border-left: 2px solid #838486;
+  padding-left: 5px;
+}
