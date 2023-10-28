@@ -13,6 +13,7 @@ function Login() {
     const [emailOk, setEmailOk] = useState(false);
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
+
     const navigate = useNavigate();
     const postLogin = async () => {
         try {
@@ -29,7 +30,7 @@ function Login() {
                 <PageTitle title="Iniciar Sesión" />
                 <div className="login-input-container">
                     <div className="login-email-input">
-                        <Input setter={setEmail} validation={setEmailOk} name="Nombre de Usuario o E-mail:" type="email" placeholder="example@email.com" />
+                        <Input setter={setEmail} validation={setEmailOk} name="Nombre de Usuario o E-mail:" type="text" placeholder="example@email.com" />
                     </div>
                     <div className="login-pass-input">
                         <InputPassword setter={setPassword} validation={setPasswordOk} name="Contraseña:" type="password"></InputPassword>
@@ -37,7 +38,7 @@ function Login() {
                 </div>
                 <div className="login-button-container">
                     <OrangeButton postLogin={postLogin} isdisabled={!(emailOk && passwordOk)} txt="Iniciar Sesión" />
-                    <Link to="/recovery"><TransButton txt="¿Olvidaste tu contraseña?" /></Link>
+                    <Link className="link-trans-button" to="/recovery"><TransButton txt="¿Olvidaste tu contraseña?" /></Link>
                 </div>
             </div>
         </>

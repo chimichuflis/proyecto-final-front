@@ -7,8 +7,8 @@
     align-items: center;
     gap: 12px;
     border-radius: 0px 16px;
-    border: 2px solid var(--medios-tonos-gris-5, #26262E);
-    color: var(--medios-tonos-gris-5, #26262E);
+    border: 2px solid #26262E;
+    color: #26262E;
     text-align: center;
     font-family: Rubik;
     font-size: 16px;
