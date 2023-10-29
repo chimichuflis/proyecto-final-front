@@ -11,7 +11,7 @@ function WelcomePage() {
                 <div className="welcome-background">
 
                 </div>
-                <div className="welcome-logo">
+                <div className="welcome-logo ani-left">
                     <div>
                         <img src="../Logotipo.svg" alt="" />
                     </div>
@@ -19,7 +19,7 @@ function WelcomePage() {
                     <p>Música a medida.</p>
 
                 </div>
-                <div className="welcome-buttons-container">
+                <div className="welcome-buttons-container ani-right">
                     <div className="welcome-buttons">
                         <Link to="/register" className="trans-button-txt link-orange-button"><OrangeButton txt="Registrarse Gratis" /></Link>
                         <BorderTransButton img="../google-logo.svg" txt="Continuar con google" />

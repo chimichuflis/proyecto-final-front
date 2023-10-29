@@ -35,7 +35,7 @@ function RegisterConf() {
                     </div>
                     <div className="login-pass-input">
                         <InputPassword setter={setPassword} validation={setPasswordOk} name="Contraseña:" type="password"></InputPassword>
-                        <p>Deberá contener al menos 8 caracteres.</p>
+                        <p>{password.length > 1 && password.length < 8 ? "Deberá contener al menos 8 caracteres." : ""}</p>
                     </div>
 
                 </div>
