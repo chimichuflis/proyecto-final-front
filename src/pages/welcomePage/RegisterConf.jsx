@@ -26,10 +26,10 @@ function RegisterConf() {
         <>
             <div className="login-container gradient-top">
                 <PageTitle title="Crear Cuenta" />
-                <div className="register-span">
+                <div className="register-span ani-right-enter">
                     <span>Ingresa un nombre de usuario y contraseña.</span>
                 </div>
-                <div className="register-conf-input-container">
+                <div className="register-conf-input-container ani-right-enter">
                     <div className="login-email-input">
                         <Input setter={setUser} validation={() => { }} name="Nombre de Usuario:" type="text" placeholder="Nombre de usuario" />
                     </div>
@@ -39,13 +39,13 @@ function RegisterConf() {
                     </div>
 
                 </div>
-                <div className="register-checkbox">
+                <div className="register-checkbox ani-right-enter">
                     <div className="register-checkbox-input-outside">
                         <input onChange={(e) => { setTos(e.target.checked) }} className="register-checkbox-input-inside" type="checkbox" name="" id="" />
                     </div>
                     <span className="checkbox-span">He leído y acepto los <a className="a-span" href="">Términos</a> y <a className="a-span" href="">Condiciones.</a></span>
                 </div>
-                <div className="register-conf-button-container">
+                <div className="register-conf-button-container ani-right-enter">
                     <OrangeButton postLogin={postRegister} isdisabled={!(passwordOk && user.length > 3 && tos)} txt="Continuar" />
                 </div>
             </div>

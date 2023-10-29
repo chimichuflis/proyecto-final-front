@@ -10,6 +10,7 @@ import Register from "./pages/welcomePage/Register.jsx";
 import { Search } from "./pages/search/Search.jsx";
 import RegisterConf from "./pages/welcomePage/RegisterConf.jsx";
 import Recovery from "./pages/welcomePage/Recovery.jsx";
+import ContextualMusic from "./pages/contextualMusic/ContextualMusic.jsx";
 import Profile from "./pages/profile/Profile.jsx";
 // import Playlists from "./pages/profile/Playlists.jsx";
 // import Settings from "./pages/profile/Settings.jsx";
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
     element: <Register />,
   },
   {
-    path: "/RegisterConfirm",
+    path: "/registerconfirm",
     element: <RegisterConf />,
   },
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
   //   path: "profile/settings",
   //   element: <Settings />,
   // },
+  {
+    path: "/contextualmusic",
+    element: <ContextualMusic />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
