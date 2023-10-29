@@ -33,11 +33,11 @@ function Register() {
             <div className="register-container gradient-top ">
                 <div className="register-wrapper">
                     <PageTitle title="Crear Cuenta" />
-                    <div className="register-span">
+                    <div className="register-span ani-right-enter">
                         <span>¿Cuál es tu correo electrónico?</span>
                     </div>
                     <div className="register-input-container">
-                        <div className="register-email-input">
+                        <div className="register-email-input ani-left-enter">
                             <Input setter={setEmail} validation={setEmailOk} name="Correo electrónico:" type="email" placeholder="example@email.com" />
                             <p className={emailValid ? "valid-email" : (emailMsg ? "invalid-email message-animation" : "invalid-email")}>
                                 {emailValid ? "Email disponible" : emailMsg}
@@ -47,7 +47,7 @@ function Register() {
                     </div>
                 </div>
 
-                <div className="register-button-container">
+                <div className="register-button-container ani-right-enter">
                     <OrangeButton postLogin={registerEmail} isdisabled={!(emailOk && emailValid)} txt="Continuar" />
                 </div>
             </div>
