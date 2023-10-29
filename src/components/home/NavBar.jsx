@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <div className="container-nav nav-end">
       <div>
-        <Link className="link" to={"/home/"}>
+        <Link className="link-nav" to={"/home/"}>
           <div
             className={
               location.pathname.indexOf("home") >= 0 ? "selected" : "btn"
@@ -26,7 +26,7 @@ function NavBar() {
         </Link>
       </div>
       <div>
-        <Link className="link" to={"/search"}>
+        <Link className="link-nav" to={"/search"}>
           <div className={location.pathname == "/search" ? "selected" : "btn"}>
             <img
               src={
@@ -40,7 +40,7 @@ function NavBar() {
         </Link>
       </div>
       <div>
-        <Link className="link" to={"/profile/"}>
+        <Link className="link-nav" to={"/profile/"}>
           <div
             className={location.pathname == "/profile/" ? "selected" : "btn"}
           >
@@ -56,7 +56,7 @@ function NavBar() {
         </Link>
       </div>
       <div>
-        <Link className="link" to={"/friends/"}>
+        <Link className="link-nav" to={"/friends/"}>
           <div
             className={location.pathname === "/friends/" ? "selected" : "btn"}
           >

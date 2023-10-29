@@ -10,31 +10,10 @@
   margin-bottom: 16px;
   font-size: 26px;
 }
-.subtitle-search {
+.main-search {
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  height: 24px;
-  flex: 1 1;
-  margin-top: 24px;
+  flex-direction: column;
 }
-.subtitle-search h4 {
-  font-size: 16px;
-  line-height: 24px;
-}
-.line {
-  border-top: 2px solid #bfc0c1;
-  height: 12px;
-  flex: 1 1;
-  margin-left: 15px;
-}
-.songs-container {
+.padding-top-search {
   padding-top: 24px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  overflow-y: scroll;
-  height: 600px;
 }

@@ -1,0 +1,24 @@
+.wrapper-sggted {
+  padding-top: 12px;
+}
+.wrapper-item-sggted {
+  display: flex;
+  align-items: center;
+  flex: 1 1;
+  padding: 12px 0;
+}
+.img-suggest img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+}
+.line-bottom-sgtd {
+  flex: 1 1;
+  border-top: 2px solid #e4e6e8;
+  padding-top: 12px;
+  height: 1px;
+}
+.tittle-sggted {
+  font-size: 14px;
+  color: #838486;
+}
