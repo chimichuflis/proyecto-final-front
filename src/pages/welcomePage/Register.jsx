@@ -4,7 +4,7 @@ import OrangeButton from "../../components/OrangeButton";
 import Input from "../../components/Input";
 import { useEffect, useState } from "react";
 import { available } from "../../API/Rule_Login";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
     const [emailOk, setEmailOk] = useState(false)
@@ -39,9 +39,8 @@ function Register() {
                     <div className="register-input-container">
                         <div className="register-email-input">
                             <Input setter={setEmail} validation={setEmailOk} name="Correo electrónico:" type="email" placeholder="example@email.com" />
-                            <p className={emailValid ? "valid-email" : "invalid-email"}>{
-                                emailValid ? "Email disponible" : emailMsg
-                            }
+                            <p className={emailValid ? "valid-email" : (emailMsg ? "invalid-email message-animation" : "invalid-email")}>
+                                {emailValid ? "Email disponible" : emailMsg}
                             </p>
                             <p>Deberás poder confirmarlo luego.</p>
                         </div>

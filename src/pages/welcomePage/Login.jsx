@@ -13,16 +13,26 @@ function Login() {
     const [emailOk, setEmailOk] = useState(false);
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
+    const [incorrectPassword, setIncorrectPassword] = useState(false);
+    const [responseMsg, setResponseMsg] = useState("")
 
     const navigate = useNavigate();
     const postLogin = async () => {
         try {
             const response = await login(email, password)
-            localStorage.setItem("token", response.token)
-            navigate("/home")
+            if (response.pass) {
+                localStorage.setItem("token", response.token)
+                navigate("/home");
+                return
+            }
+            setResponseMsg(response.msg)
+            setIncorrectPassword(true);
         }
-        catch (err) { console.log(err) }
-    }
+        catch (err) {
+            console.log(err)
+            setIncorrectPassword(true);
+        }
+    };
 
     return (
         <>
@@ -33,7 +43,10 @@ function Login() {
                         <Input setter={setEmail} validation={setEmailOk} name="Nombre de Usuario o E-mail:" type="text" placeholder="example@email.com" />
                     </div>
                     <div className="login-pass-input">
-                        <InputPassword setter={setPassword} validation={setPasswordOk} name="Contraseña:" type="password"></InputPassword>
+                        <InputPassword setter={setPassword} validation={setPasswordOk} name="Contraseña:" type="password" />
+                        {incorrectPassword && (
+                            <p className={`incorrect-password-message ${incorrectPassword ? "message-animation" : ""}`}>{responseMsg}</p>
+                        )}
                     </div>
                 </div>
                 <div className="login-button-container">
