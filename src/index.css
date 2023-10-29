@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
 }
-
 body {
   min-height: 100vh;
   padding: 0;
@@ -14,19 +13,20 @@ button {
 }
 
 .gradient-top {
-  background-image: linear-gradient(rgba(255, 142, 10, 0.12) 40px,
-      rgba(255, 142, 10, 0.03) 90px,
-      rgba(253, 254, 255, 0) 160px);
+  background-image: linear-gradient(
+    rgba(255, 142, 10, 0.12) 40px,
+    rgba(255, 142, 10, 0.03) 90px,
+    rgba(253, 254, 255, 0) 160px
+  );
 }
 
 .ani-left {
   animation: leftanimation 0.8s ease-in-out;
-
 }
 
 @keyframes leftanimation {
   0% {
-    transform: translateX(-150vw)
+    transform: translateX(-150vw);
   }
 
   60% {
@@ -40,12 +40,11 @@ button {
 
 .ani-right {
   animation: rightanimation 0.8s ease-in-out;
-
 }
 
 @keyframes rightanimation {
   0% {
-    transform: translateX(150vw)
+    transform: translateX(150vw);
   }
 
   60% {

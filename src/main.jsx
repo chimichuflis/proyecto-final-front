@@ -10,7 +10,7 @@ import Register from "./pages/welcomePage/Register.jsx";
 import { Search } from "./pages/search/Search.jsx";
 import RegisterConf from "./pages/welcomePage/RegisterConf.jsx";
 import Recovery from "./pages/welcomePage/Recovery.jsx";
-// import Profile from "./pages/profile/Profile.jsx";
+import Profile from "./pages/profile/Profile.jsx";
 // import Playlists from "./pages/profile/Playlists.jsx";
 // import Settings from "./pages/profile/Settings.jsx";
 
@@ -49,16 +49,16 @@ const router = createBrowserRouter([
     path: "/search",
     element: <Search />,
   },
-  // {
-  //   path: "/profile",
-  //   element: <Profile />,
-  // },
+  {
+    path: "/profile",
+    element: <Profile />,
+  },
   // {
   //   path: "/playlists",
   //   element: <Playlists />,
   // },
   // {
-  //   path: "/settings",
+  //   path: "profile/settings",
   //   element: <Settings />,
   // },
 ]);
