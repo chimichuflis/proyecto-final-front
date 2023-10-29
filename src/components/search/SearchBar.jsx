@@ -1,27 +1,34 @@
 import React, { useState } from "react";
 import "../../styles/SearchBar.css";
 
-function SearchBar({ handleSearch, resetSearch, handdleClick }) {
-  const [searchTerm, setSearchTerm] = useState("");
+function SearchBar({ handdleClick, changeIcon, handleBack, setSearchTerm }) {
+  const [inputValue, setInputValue] = useState("");
   const handleSearchChange = (value) => {
     setSearchTerm(value);
-    handleSearch(value);
+    setInputValue(value);
   };
   const handleClearButton = (event) => {
     setSearchTerm("");
-    resetSearch([]);
+    setInputValue("");
   };
   return (
-    <div onClick={handdleClick} className="input-search">
-      <div>
-        <img src="search.svg" alt="" />
-      </div>
+    <div className="input-search">
+      {changeIcon ? (
+        <div>
+          <img src="search.svg" alt="" />
+        </div>
+      ) : (
+        <div onClick={handleBack}>
+          <img src="back.svg" alt="" />
+        </div>
+      )}
       <input
-        value={searchTerm}
+        onClick={handdleClick}
+        value={inputValue}
         placeholder="Que deseas escuchar?"
         onChange={(e) => handleSearchChange(e.target.value)}
       />
-      {searchTerm.length > 0 && (
+      {inputValue.length > 0 && (
         <img onClick={handleClearButton} src="cross.svg" alt="" />
       )}
     </div>

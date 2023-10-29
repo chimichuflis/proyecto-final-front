@@ -10,3 +10,10 @@
   margin-bottom: 16px;
   font-size: 26px;
 }
+.main-search {
+  display: flex;
+  flex-direction: column;
+}
+.padding-top-search {
+  padding-top: 24px;
+}

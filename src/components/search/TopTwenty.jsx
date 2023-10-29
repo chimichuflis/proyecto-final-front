@@ -1,7 +1,8 @@
 import React from "react";
 import Songs from "./Songs";
+import "../../styles/TopTwenty.css";
 
-function TopTwenty() {
+function TopTwenty({ songItems }) {
   return (
     <div>
       <div className="subtitle-search">
@@ -9,11 +10,17 @@ function TopTwenty() {
         <div className="line"></div>
       </div>
       <div className="songs-container">
-        <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
-        <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
-        <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
-        <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
-        <Songs image="artists/1.jpeg" song="Cancion" artist="Mailey" />
+        {songItems.map((item, index) => {
+          return (
+            <div key={index}>
+              <Songs
+                image={`artists/${item.artist_id}.jpeg`}
+                song={item.song_name}
+                artist={item.artist_name}
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );
