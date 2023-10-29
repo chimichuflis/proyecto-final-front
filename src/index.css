@@ -19,7 +19,7 @@ button {
       rgba(253, 254, 255, 0) 160px);
 }
 
-.ani-left {
+.ani-left-enter {
   animation: leftanimation 0.8s ease-in-out;
 
 }
@@ -38,7 +38,25 @@ button {
   }
 }
 
-.ani-right {
+.ani-left-exit {
+  animation: rightanimation-exit 0.8s ease-in-out;
+}
+
+@keyframes rightanimation-exit {
+  0% {
+    transform: translateX(150vw);
+  }
+
+  60% {
+    transform: translateX(-2vw);
+  }
+
+  80% {
+    transform: translateX(2vw);
+  }
+}
+
+.ani-right-enter {
   animation: rightanimation 0.8s ease-in-out;
 
 }
@@ -54,5 +72,23 @@ button {
 
   80% {
     transform: translateX(2vw);
+  }
+}
+
+.ani-right-exit {
+  animation: leftanimation-exit 0.8s ease-in-out;
+}
+
+@keyframes leftanimation-exit {
+  0% {
+    transform: translateX(-150vw);
+  }
+
+  60% {
+    transform: translateX(2vw);
+  }
+
+  80% {
+    transform: translateX(-2vw);
   }
 }
