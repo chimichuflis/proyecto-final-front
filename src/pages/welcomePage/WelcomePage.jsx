@@ -6,8 +6,6 @@ import TransButton from "../../components/TransButton";
 import "../../styles/WelcomePage.css";
 
 function WelcomePage() {
-    const location = useLocation();
-
     return (
         <>
             <div className="welcome-page-container">

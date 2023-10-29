@@ -92,3 +92,8 @@ button {
     transform: translateX(-2vw);
   }
 }
+
+.button-general {
+  width: 100%;
+  max-width: 320px;
+}
