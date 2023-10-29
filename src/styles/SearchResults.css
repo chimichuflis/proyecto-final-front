@@ -1,4 +1,3 @@
-.search-results {
-  overflow-y: scroll;
-  height: 600px;
+.results-search {
+  padding-top: 24px;
 }

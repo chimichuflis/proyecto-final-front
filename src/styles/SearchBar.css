@@ -26,3 +26,6 @@
   outline: none;
   color: rgb(41, 37, 37);
 }
+.input-search:focus-within {
+  border: 2px solid #ff8e0a;
+}

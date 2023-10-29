@@ -1,27 +1,26 @@
-.sort-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 36px;
-  border: 1.5px solid #26262e;
-  border-radius: 0 12px 0 12px;
-  padding: 6px 8px;
-  width: fit-content;
-}
 .sort-wrapper {
   display: flex;
   flex-direction: row;
   gap: 8px;
-  padding: 24px 0 12px 0;
+  padding: 24px 0 10 0;
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
-.sort-btn-active {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 36px;
-  border: 1.5px solid #26262e;
+.sort-wrapper input {
+  appearance: none;
+}
+.sort-wrapper input + p {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #26262e;
   border-radius: 0 12px 0 12px;
   padding: 6px 8px;
+}
+.sort-wrapper input:checked + p {
+  height: 36px;
+  padding: 6px 8px;
   width: fit-content;
-  background-color: orange;
+  background-color: #ff8e0a;
+  border: 2px solid #ff8e0a;
+  color: white;
 }
