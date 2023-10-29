@@ -39,10 +39,10 @@ function Login() {
             <div className="login-container gradient-top">
                 <PageTitle title="Iniciar Sesión" />
                 <div className="login-input-container">
-                    <div className="login-email-input">
+                    <div className="login-email-input ani-right-enter">
                         <Input setter={setEmail} validation={setEmailOk} name="Nombre de Usuario o E-mail:" type="text" placeholder="example@email.com" />
                     </div>
-                    <div className="login-pass-input">
+                    <div className="login-pass-input ani-left-enter">
                         <InputPassword setter={setPassword} validation={setPasswordOk} name="Contraseña:" type="password" />
                         {incorrectPassword && (
                             <p className={`incorrect-password-message ${incorrectPassword ? "message-animation" : ""}`}>{responseMsg}</p>
@@ -50,8 +50,12 @@ function Login() {
                     </div>
                 </div>
                 <div className="login-button-container">
-                    <OrangeButton postLogin={postLogin} isdisabled={!(emailOk && passwordOk)} txt="Iniciar Sesión" />
-                    <Link className="link-trans-button" to="/recovery"><TransButton txt="¿Olvidaste tu contraseña?" /></Link>
+                    <div className="button-general ani-right-enter">
+                        <OrangeButton postLogin={postLogin} isdisabled={!(emailOk && passwordOk)} txt="Iniciar Sesión" />
+                    </div>
+                    <div className="button-general ani-left-enter">
+                        <Link className="trans-button-txt link-trans-button" to="/recovery"><TransButton txt="¿Olvidaste tu contraseña?" /></Link>
+                    </div>
                 </div>
             </div>
         </>
