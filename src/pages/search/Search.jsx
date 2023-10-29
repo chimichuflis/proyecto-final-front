@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import SearchBar from "../../components/search/SearchBar";
-import "../../styles/search.css";
+import "../../styles/Search.css";
 import NavBar from "../../components/home/NavBar";
 import SearchResult from "../../components/search/SearchResult";
 import { songs } from "../../API/Rule_Songs";
-import { searchApi } from "../../API/Rule_Search";
+import { searchApi } from "../../API/Rule_search.jsx";
 import TopTwenty from "../../components/search/TopTwenty";
 import { playlists } from "../../API/Rule_playlist";
 
