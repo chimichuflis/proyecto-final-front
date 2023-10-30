@@ -24,9 +24,6 @@
   flex-wrap: wrap;
   gap: 15px;
   overflow-y: scroll;
+  scrollbar-width: none;
   height: 600px;
-}
-.main-search {
-  height: 600px;
-  overflow: scroll;
 }

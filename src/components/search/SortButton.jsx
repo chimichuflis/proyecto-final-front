@@ -1,16 +1,7 @@
 import React, { useState } from "react";
 import "../../styles/SortButton.css";
 
-export default function SortButton({
-  onSort,
-  tops,
-  songs,
-  albums,
-  artists,
-  playlists,
-  setOption,
-  setSuggest,
-}) {
+export default function SortButton({ setOption, setSuggest }) {
   const [ButtonActive, SetButtonActive] = useState(false);
 
   const handleActive = () => {

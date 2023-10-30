@@ -1,0 +1,18 @@
+.filter-btn input {
+  appearance: none;
+}
+.filter-btn input + p {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #26262e;
+  border-radius: 0 12px 0 12px;
+  padding: 6px 8px;
+}
+.filter-btn input:checked + p {
+  height: 36px;
+  padding: 6px 8px;
+  width: fit-content;
+  background-color: #ff8e0a;
+  border: 2px solid #ff8e0a;
+  color: white;
+}

@@ -14,6 +14,8 @@ import Recovery from "./pages/welcomePage/Recovery.jsx";
 import Profile from "./pages/profile/Profile.jsx";
 // import Playlists from "./pages/profile/Playlists.jsx";
 import Settings from "./pages/profile/Settings.jsx";
+import CreatePlaylist from "./pages/playlist/CreatePlaylist.jsx";
+import CreateBy from "./pages/playlist/CreateBy.jsx";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +60,14 @@ const router = createBrowserRouter([
   //   path: "/playlists",
   //   element: <Playlists />,
   // },
+  {
+    path: "/createplaylist",
+    element: <CreatePlaylist />,
+  },
+  {
+    path: "/createplaylist/createby",
+    element: <CreateBy />,
+  },
   {
     path: "/settings",
     element: <Settings />,
