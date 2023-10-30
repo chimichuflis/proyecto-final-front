@@ -3,11 +3,15 @@ import Dropdown from "../../components/DropDown";
 import PageTitle from "../../components/PageTitle";
 import "../../styles/ContextualMusic.css";
 import { contextualApi } from "../../API/Rule_Contex";
+
 function ContextualMusic(props) {
     const [activities, setActivities] = useState([]);
     const [moods, setMoods] = useState([]);
     const [weather, setWeather] = useState([]);
     const [genres, setGenres] = useState([]);
+    const [selectedActivity, setSelectedActivity] = useState(null);
+    const [selectedMood, setSelectedMood] = useState(null);
+    const [selectedWeather, setSelectedWeather] = useState(null);
 
     const [contextualOption, setContextualOption] = useState({
         activities: [],
@@ -32,32 +36,55 @@ function ContextualMusic(props) {
     }, []);
 
     const handleActivitySelect = (selectedOption) => {
-
+        setSelectedActivity(selectedOption);
     };
 
     const handleMoodSelect = (selectedOption) => {
-
+        setSelectedMood(selectedOption);
     };
 
-    const handleGenreSelect = (selectedOption) => {
-
+    const handleWeatherSelect = (selectedOption) => {
+        setSelectedWeather(selectedOption);
     };
 
     return (
         <div className="contex-container gradient-top">
             <PageTitle title="Música Contextual" />
-
-            {activities.length > 0 && (
-                <Dropdown dropname="Actividades" options={activities} onSelect={handleActivitySelect} selector="activity" />
-            )}
-
-            {moods.length > 0 && (
-                <Dropdown dropname="Estado de ánimo" options={moods} onSelect={handleMoodSelect} selector="mood" />
-            )}
-
-            {weather.length > 0 && (
-                <Dropdown dropname="Clima" options={weather} onSelect={handleGenreSelect} selector="weather" />
-            )}
+            <div className="dropdown-container">
+                <div>
+                    {activities.length > 0 && (
+                        <Dropdown
+                            dropname="Actividades"
+                            options={activities}
+                            onSelect={handleActivitySelect}
+                            selector="activity"
+                            selectedOption={selectedActivity}
+                        />
+                    )}
+                </div>
+                <div>
+                    {moods.length > 0 && (
+                        <Dropdown
+                            dropname="Estado de ánimo"
+                            options={moods}
+                            onSelect={handleMoodSelect}
+                            selector="mood"
+                            selectedOption={selectedMood}
+                        />
+                    )}
+                </div>
+                <div>
+                    {weather.length > 0 && (
+                        <Dropdown
+                            dropname="Clima"
+                            options={weather}
+                            onSelect={handleWeatherSelect}
+                            selector="weather"
+                            selectedOption={selectedWeather}
+                        />
+                    )}
+                </div>
+            </div>
         </div>
     );
 }

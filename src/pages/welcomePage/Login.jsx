@@ -37,7 +37,7 @@ function Login() {
     return (
         <>
             <div className="login-container gradient-top">
-                <PageTitle title="Iniciar Sesión" />
+                <PageTitle goTo="/" title="Iniciar Sesión" />
                 <div className="login-input-container">
                     <div className="login-email-input ani-right-enter">
                         <Input setter={setEmail} validation={setEmailOk} name="Nombre de Usuario o E-mail:" type="text" placeholder="example@email.com" />
@@ -50,10 +50,10 @@ function Login() {
                     </div>
                 </div>
                 <div className="login-button-container">
-                    <div className="button-general ani-right-enter">
+                    <div className="size-general ani-right-enter">
                         <OrangeButton postLogin={postLogin} isdisabled={!(emailOk && passwordOk)} txt="Iniciar Sesión" />
                     </div>
-                    <div className="button-general ani-left-enter">
+                    <div className="size-general ani-left-enter">
                         <Link className="trans-button-txt link-trans-button" to="/recovery"><TransButton txt="¿Olvidaste tu contraseña?" /></Link>
                     </div>
                 </div>
