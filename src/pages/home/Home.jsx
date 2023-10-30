@@ -18,10 +18,12 @@ function Home() {
         <AccessPoint
           title="Cupido Musical"
           text="Tus artistas favoritos nunca van a dejarte con el corazon roto"
+          goTo="/match"
         />
         <AccessPoint
           title="Musica Contextual"
           text="Creamos la playlist perfecta para cualquier situacion"
+          goTo=""
         />
       </div>
       <nav className="nav-end">

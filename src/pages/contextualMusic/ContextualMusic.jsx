@@ -3,7 +3,6 @@ import Dropdown from "../../components/DropDown";
 import PageTitle from "../../components/PageTitle";
 import "../../styles/ContextualMusic.css";
 import { contextualApi } from "../../API/Rule_Contex";
-
 function ContextualMusic(props) {
     const [activities, setActivities] = useState([]);
     const [moods, setMoods] = useState([]);

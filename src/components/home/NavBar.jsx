@@ -6,9 +6,15 @@ function NavBar() {
   const location = useLocation();
   console.log(location.pathname);
   return (
-    <div className="container-nav nav-end">
+    <div
+      className={
+        location.pathname.indexOf("profile") >= 0
+          ? "container-nav-white nav-end"
+          : "container-nav nav-end"
+      }
+    >
       <div>
-        <Link className="link-nav" to={"/home/"}>
+        <Link className="link-nav" to={"/home"}>
           <div
             className={
               location.pathname.indexOf("home") >= 0 ? "selected" : "btn"
