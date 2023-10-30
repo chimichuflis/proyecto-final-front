@@ -1,0 +1,17 @@
+.wrapper-imgs-playlist-cover {
+  height: 152px;
+  width: 152px;
+  border-radius: 0 40px 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrapper-imgs-playlist-cover img {
+  width: 76px;
+  height: 76px;
+}
+#border1 {
+  border-radius: 0 40px 0 0;
+}
+#border2 {
+  border-radius: 0 0 0 40px;
+}

@@ -2,7 +2,7 @@ import API from "./API_rules";
 
 export const playlists = async (value) => {
   let url = "/playlists";
-  return await API.post(url, { value: value })
+  return await API.get(url, { value: value })
     .then((resultado) => {
       return resultado.data;
     })
