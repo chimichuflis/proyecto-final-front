@@ -7,7 +7,7 @@ function Settings() {
   return (
     <div className="gradient-top wrapper-settings ">
       <div>
-        <PageTitle title="Configuracion" />
+        <PageTitle goTo="/profile" title="Configuracion" />
         <main className="main-settings">
           <OrangeButton txt="Editar Apariencia" />
           <button className="black-button">Editar Perfil</button>
