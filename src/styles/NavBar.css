@@ -13,6 +13,16 @@
   flex: 1 1;
   z-index: 2;
 }
+.container-nav-white {
+  height: 98px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background: white;
+  flex: 1 1;
+  z-index: 2;
+}
 .btn img {
   height: 24px;
   width: 24px;
@@ -45,4 +55,5 @@
   position: absolute;
   bottom: 0;
   width: 100vw;
+  left: 0;
 }
