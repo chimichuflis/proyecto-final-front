@@ -14,7 +14,7 @@ function Profile() {
             <h1>Nombre</h1>
             <span>@nombre_1</span>
           </div>
-          <Link link to="/profile/settings">
+          <Link link to="/settings">
             <div className="icon-container">
               <img className="setting-icon" src="/setting.svg" alt="" />
             </div>
