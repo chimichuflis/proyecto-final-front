@@ -3,16 +3,21 @@ import NavBar from "../../components/home/NavBar";
 import "../../styles/Profile.css";
 import PlaylistCover from "../../components/profile/PlaylistCover";
 import { Link } from "react-router-dom";
+import { jwtDecode } from "jwt-decode";
 
 function Profile() {
+  const token = localStorage.getItem("token");
+  const payload = jwtDecode(token);
+  console.log(payload);
+
   return (
     <div className="gradient-top wrapper-profile">
-      <header className="">
+      <header>
         <div className="info-profile">
           <img className="profile-img" src="/artists/1.jpeg" alt="" />
           <div className="name-user-profile">
-            <h1>Nombre</h1>
-            <span>@nombre_1</span>
+            <h1>{payload.name}</h1>
+            <span>{payload.email}</span>
           </div>
           <Link link to="/settings">
             <div className="icon-container">

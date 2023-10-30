@@ -16,14 +16,16 @@ function Home() {
       </header>
       <div className="main">
         <AccessPoint
+          img="/cupido.svg"
           title="Cupido Musical"
           text="Tus artistas favoritos nunca van a dejarte con el corazon roto"
           goTo="/match"
         />
         <AccessPoint
+          img="/contextual.svg"
           title="Musica Contextual"
           text="Creamos la playlist perfecta para cualquier situacion"
-          goTo=""
+          goTo="/contextualmusic"
         />
       </div>
       <nav className="nav-end">
