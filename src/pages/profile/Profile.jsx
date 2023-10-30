@@ -30,10 +30,12 @@ function Profile() {
         <div className="section-playlist-ptofile">
           <span>Mis Playlists</span>
           <div className="mid-line-profile"></div>
-          <label className="btn-create-playlist">
-            <input type="radio" />
-            <p>Crear Playlist</p>
-          </label>
+          <Link link to="/createplaylist" className="link">
+            <label className="btn-create-playlist">
+              <input type="radio" />
+              <p>Crear Playlist</p>
+            </label>
+          </Link>
         </div>
         <div>
           <PlaylistCover />
