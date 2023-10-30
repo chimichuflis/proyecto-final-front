@@ -14,7 +14,7 @@ function Dropdown(props) {
     return (
         <div className="dropdown">
             <select className="dropdown-header" value={props.selectedOption ? props.selectedOption[props.selector + "_id"].toString() : ''} onChange={handleOptionChange}>
-                <option value="">Select {props.dropname}</option>
+                <option disabled hidden selected value=""> {props.dropname}</option>
                 {props.options.map(option => (
                     <option key={option[props.selector + "_id"]} value={option[props.selector + "_id"]}>
                         {option[props.selector + "_name"]}
