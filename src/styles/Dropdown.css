@@ -32,6 +32,7 @@
 .dropdown-header:focus-within,
 .dropdown-header:hover {
     background-image: url("/chevron-inv.png");
+    outline: none;
 }
 
 /* .dropdown-header::before {

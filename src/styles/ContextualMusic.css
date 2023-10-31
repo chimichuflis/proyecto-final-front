@@ -14,3 +14,27 @@
     gap: 32px;
     margin-top: 32px;
 }
+
+.text-in-context {
+    display: flex;
+    width: 320px;
+    height: 32px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #26262E;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+}
+
+.footer-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
