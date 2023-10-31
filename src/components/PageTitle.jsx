@@ -7,7 +7,13 @@ export default function (props) {
       <Link to={props.goTo}>
         <img src="/back.svg" />
       </Link>
-      <h2>{props.title}</h2>
+      <div>
+        <span>{props.subtitle}</span>
+        <h2>{props.title}</h2>
+      </div>
+      {location.pathname == "/playlistgenerated" ? (
+        <img src="/options.svg" alt="" />
+      ) : null}
     </header>
   );
 }
