@@ -52,6 +52,11 @@ function ContextualMusic(props) {
             <PageTitle title="Música Contextual" />
             <div className="dropdown-container">
                 <div>
+                    <p>
+                        ¿Cuál es la ocasión?
+                    </p>
+                </div>
+                <div>
                     {activities.length > 0 && (
                         <Dropdown
                             dropname="Actividades"
@@ -63,6 +68,13 @@ function ContextualMusic(props) {
                     )}
                 </div>
                 <div>
+                    <p>
+                        ¿Cómo te sientes?
+                    </p>
+                </div>
+                <div>
+
+
                     {moods.length > 0 && (
                         <Dropdown
                             dropname="Estado de ánimo"
@@ -72,6 +84,11 @@ function ContextualMusic(props) {
                             selectedOption={selectedMood}
                         />
                     )}
+                </div>
+                <div>
+                    <p>
+                        ¿Cómo está el clima?
+                    </p>
                 </div>
                 <div>
                     {weather.length > 0 && (
