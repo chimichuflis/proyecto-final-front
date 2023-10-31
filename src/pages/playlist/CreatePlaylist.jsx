@@ -23,13 +23,10 @@ function CreatePlaylist() {
       }
     }
     if (playlistOk) {
-      availablePlaylist();
-      setNext(true);
     }
   }, [playlist]);
   const registerPlaylist = () => {
     localStorage.setItem("registerPlaylist", playlist);
-    setNext(false);
   };
   const handleClick = () => {
     navigate("/createplaylist/createby");
