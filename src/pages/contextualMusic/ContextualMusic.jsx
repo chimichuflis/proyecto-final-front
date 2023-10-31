@@ -19,7 +19,7 @@ function ContextualMusic(props) {
         { name: "mood", value: "" },
         { name: "weather", value: "" }
     ]);
-    const [selectedGenres, setSelectedGenres] = useState([])
+    const [selectedGenres, setSelectedGenres] = useState([]);
 
     const capitalCase = (str) => {
         if (str) {
@@ -38,12 +38,13 @@ function ContextualMusic(props) {
             mood:selectOptions.mood,
             weather:selectOptions.weather,
             genre:selectedGenres
-      })
+        });
         console.log(response);
-    }
-    catch(err){
-      console.log(err);
-    }
+      }
+      catch(err){
+        console.log(err);
+      }
+  }
 
     const generatePlaylist = () => {
         makePlaylist({ activity: selectOptions.activity });
