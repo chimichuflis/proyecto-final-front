@@ -32,13 +32,13 @@ function ContextualMusic(props) {
     };
 
   const makePlaylist = async ()=>{
-      const obj={}
-      selectOptions.forEach(n=>{
-        obj[n.name] = n.value;
-      });
-      obj.genre = selectedGenres;
       try{
-        const response = await createContextualPlaylistApi(obj)
+        const response = await createContextualPlaylistApi({
+            activity:selectOptions.activity,
+            mood:selectOptions.mood,
+            weather:selectOptions.weather,
+            genre:selectedGenres
+      })
         console.log(response);
     }
     catch(err){
