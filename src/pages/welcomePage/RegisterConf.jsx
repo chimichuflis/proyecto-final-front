@@ -25,7 +25,7 @@ function RegisterConf() {
     return (
         <>
             <div className="login-container gradient-top">
-                <PageTitle title="Crear Cuenta" />
+                <PageTitle goTo="/register" title="Crear Cuenta" />
                 <div className="register-span ani-right-enter">
                     <span>Ingresa un nombre de usuario y contraseña.</span>
                 </div>

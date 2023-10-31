@@ -2,11 +2,11 @@
   flex: 1 1;
   height: 80px;
   display: flex;
-  flex-direction: row;
   border-radius: 0 24px 0 24px;
   background-color: #fdfeff;
   box-shadow: 2px 2px 5px rgba(82, 80, 80, 0.192);
 }
+
 .article {
   width: 208px;
   display: flex;
@@ -15,22 +15,27 @@
   align-items: flex-start;
   padding: 0 10px 10px 15px;
 }
+
 .article h3 {
   font-size: 14px;
   font-weight: 500;
   color: #26262e;
   margin-bottom: 5px;
 }
+
 .article span {
   font-size: 12px;
   font-weight: 400;
   color: #45464b;
 }
+
 .images {
   width: 87px;
   height: 80px;
   border-radius: 0 0px 0 24px;
+  display: flex;
 }
+
 .acces-img {
   width: 87px;
   height: 80px;
