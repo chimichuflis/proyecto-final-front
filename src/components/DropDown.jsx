@@ -2,14 +2,6 @@ import "../styles/Dropdown.css";
 import React, { useState } from 'react';
 
 function Dropdown(props) {
-    const handleOptionChange = (event) => {
-        const selectedValue = event.target.value;
-        const selectedOption = props.options.find(option => option[props.selector + "_id"].toString() === selectedValue);
-        event.target.blur()
-        if (props.onSelect) {
-            props.onSelect(selectedOption);
-        }
-    };
     const capitalCase = (str) => {
         if (str) {
             const wordArr = str.split(" ");
@@ -22,8 +14,8 @@ function Dropdown(props) {
 
     return (
         <div className="dropdown">
-            <select className="dropdown-header" value={props.selectedOption ? props.selectedOption[props.selector + "_id"].toString() : ''} onChange={handleOptionChange}>
-                <option disabled hidden value=""> {props.dropname}</option>
+            <select key={props.selector} name={props.selector} className="dropdown-header" onChange={props.onSelect}>
+                <option hidden selected value=""> {props.dropname}</option>
                 {props.options.map(option => (
                     <option key={option[props.selector + "_id"]} value={option[props.selector + "_id"]}>
                         {capitalCase(option[props.selector + "_name"])}

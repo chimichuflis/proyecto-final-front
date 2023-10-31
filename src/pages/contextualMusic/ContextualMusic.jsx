@@ -2,20 +2,25 @@ import React, { useEffect, useState } from "react";
 import Dropdown from "../../components/DropDown";
 import PageTitle from "../../components/PageTitle";
 import "../../styles/ContextualMusic.css";
-import { contextualApi } from "../../API/Rule_Contex";
+import { createContextualPlaylistApi, contextualApi } from "../../API/Rule_Contex";
 import ButtonFilter from "../../components/ButtonFilter";
 import ButtonFilterTwo from "../../components/ButtonFilterTwo";
 import OrangeButton from "../../components/OrangeButton";
 
 function ContextualMusic(props) {
-    const [activities, setActivities] = useState([]);
-    const [moods, setMoods] = useState([]);
-    const [weather, setWeather] = useState([]);
-    const [genres, setGenres] = useState([]);
-    const [selectedActivity, setSelectedActivity] = useState(null);
-    const [selectedMood, setSelectedMood] = useState(null);
-    const [selectedWeather, setSelectedWeather] = useState(null);
+    const [contextualOption, setContextualOption] = useState({
+        activities: [],
+        moods: [],
+        weather: [],
+        genres: [],
+    });
+    const [selectOptions, setSelectOptions] = useState([
+      {name:"activity", value:""},
+      {name:"mood", value:""},
+      {name:"weather",value:""}
+    ]);
     const [selectedGenres, setSelectedGenres] = useState([])
+
     const capitalCase = (str) => {
         if (str) {
             const wordArr = str.split(" ");
@@ -25,9 +30,25 @@ function ContextualMusic(props) {
             return capitalyzedArr.join(" ");
         }
     };
-    const generatePlaylist = () => {
-        const arr = document.querySelectorAll(".footer-button-container input:checked")
-        console.log(arr)
+
+  const makePlaylist = async ()=>{
+      const obj={}
+      selectOptions.forEach(n=>{
+        obj[n.name] = n.value;
+      });
+      obj.genre = selectedGenres;
+      try{
+        const response = await createContextualPlaylistApi(obj)
+        console.log(response);
+    }
+    catch(err){
+      console.log(err);
+    }
+     //req.body = { activity: int, mood: int, weather: int, genre: [int,...] }
+  }
+
+  const generatePlaylist = () => {
+    makePlaylist({activity:selectOptions.activity});
     }
 
     const refreshChecked = () => {
@@ -35,24 +56,16 @@ function ContextualMusic(props) {
         const genreList = [...arr].map((n) => {
             return n.value
         })
-        setSelectedGenres(genreList)
+        setSelectedGenres(genreList);
+        console.log(genreList);
     }
 
-    const [contextualOption, setContextualOption] = useState({
-        activities: [],
-        moods: [],
-        weather: [],
-        genres: [],
-    });
 
     useEffect(() => {
         const getContextual = async () => {
             try {
                 const response = await contextualApi();
                 setContextualOption(response);
-                setActivities(response.activities);
-                setMoods(response.moods);
-                setWeather(response.weather);
             } catch (error) {
                 console.log(error);
             }
@@ -60,17 +73,15 @@ function ContextualMusic(props) {
         getContextual();
     }, []);
 
-    const handleActivitySelect = (selectedOption) => {
-        setSelectedActivity(selectedOption);
-    };
-
-    const handleMoodSelect = (selectedOption) => {
-        setSelectedMood(selectedOption);
-    };
-
-    const handleWeatherSelect = (selectedOption) => {
-        setSelectedWeather(selectedOption);
-    };
+  const handleUpdateSelect = () => {
+    const getSelects = document.querySelectorAll("select");
+    const selectList = {};    
+    for(let i=0;i<getSelects.length;i++){
+      selectList[getSelects[i].name]=getSelects[i].value;
+    }
+    setSelectOptions(selectList);
+    console.table(selectList);
+  }
 
     return (
         <div className="contex-container gradient-top">
@@ -82,13 +93,12 @@ function ContextualMusic(props) {
                     </p>
                 </div>
                 <div>
-                    {activities.length > 0 && (
+                    {contextualOption.activities.length > 0 && (
                         <Dropdown
                             dropname="Actividades"
-                            options={activities}
-                            onSelect={handleActivitySelect}
+                            options={contextualOption.activities}
+                            onSelect={handleUpdateSelect}
                             selector="activity"
-                            selectedOption={selectedActivity}
                         />
                     )}
                 </div>
@@ -98,15 +108,12 @@ function ContextualMusic(props) {
                     </p>
                 </div>
                 <div>
-
-
-                    {moods.length > 0 && (
+                    {contextualOption.moods.length > 0 && (
                         <Dropdown
                             dropname="Estado de ánimo"
-                            options={moods}
-                            onSelect={handleMoodSelect}
+                            options={contextualOption.moods}
+                            onSelect={handleUpdateSelect}
                             selector="mood"
-                            selectedOption={selectedMood}
                         />
                     )}
                 </div>
@@ -116,13 +123,12 @@ function ContextualMusic(props) {
                     </p>
                 </div>
                 <div>
-                    {weather.length > 0 && (
+                    {contextualOption.weather.length > 0 && (
                         <Dropdown
                             dropname="Clima"
-                            options={weather}
-                            onSelect={handleWeatherSelect}
+                            options={contextualOption.weather}
+                            onSelect={handleUpdateSelect}
                             selector="weather"
-                            selectedOption={selectedWeather}
                         />
                     )}
                 </div>
@@ -130,14 +136,15 @@ function ContextualMusic(props) {
                     <p>Selecciona hasta 3 géneros:</p>
                 </div>
                 <div className="footer-button-container">
-                    {contextualOption.genres.map((n) => { return <ButtonFilterTwo onFkChange={refreshChecked} txt={capitalCase(n.genre_name)} /> })}
+                    {contextualOption.genres.map((n) => { return <ButtonFilterTwo changeFunc={refreshChecked} filterId={n.genre_id} txt={capitalCase(n.genre_name)} /> })}
                 </div>
                 <div className="size-general">
-                    <OrangeButton txt="Crear Playlist" />
+
+                    <OrangeButton isdisabled={(selectedGenres.length>3 || !(selectOptions.mood!="" || selectOptions.activity!="" || selectOptions.weather!="" || selectedGenres.length>0))} txt="Crear Playlist" postLogin={generatePlaylist}/>
                 </div>
             </div>
         </div>
     );
 }
-
+// genrelength>0 || select.mood || selec
 export default ContextualMusic;
