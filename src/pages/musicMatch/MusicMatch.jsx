@@ -9,6 +9,9 @@ export default function () {
 
   const [matchList, setMatchList] = useState([]);
   const [likedList, setLikedList] = useState([]);
+  const clearLikedList = () => {
+    setLikedList(likedList.slice(0, likedList.length - 1));
+  }
 
   const getMatchList = async () => {
     const result = await getMatches();
@@ -44,10 +47,10 @@ export default function () {
 
       <div className="matched-list">
 
-        <div className="button-history-container">
+        <div className="button-history-container ani-right-enter">
           <p>Matches actuales:</p>
           <div className="button-history-outside">
-            <button className="button-history-inside">
+            <button onClick={clearLikedList} className="button-history-inside">
               <img src="./Vector.svg" alt="" /></button>
           </div>
         </div>
@@ -63,7 +66,7 @@ export default function () {
 
       </div>
 
-      <div className="match-button-container">
+      <div className="match-button-container ani-left-enter">
         <OrangeButton txt="Crear Playlist" />
       </div>
     </div>)

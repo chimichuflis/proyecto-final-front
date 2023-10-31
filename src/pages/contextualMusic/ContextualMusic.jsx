@@ -15,9 +15,9 @@ function ContextualMusic(props) {
         genres: [],
     });
     const [selectOptions, setSelectOptions] = useState([
-      {name:"activity", value:""},
-      {name:"mood", value:""},
-      {name:"weather",value:""}
+        { name: "activity", value: "" },
+        { name: "mood", value: "" },
+        { name: "weather", value: "" }
     ]);
     const [selectedGenres, setSelectedGenres] = useState([])
 
@@ -44,11 +44,9 @@ function ContextualMusic(props) {
     catch(err){
       console.log(err);
     }
-     //req.body = { activity: int, mood: int, weather: int, genre: [int,...] }
-  }
 
-  const generatePlaylist = () => {
-    makePlaylist({activity:selectOptions.activity});
+    const generatePlaylist = () => {
+        makePlaylist({ activity: selectOptions.activity });
     }
 
     const refreshChecked = () => {
@@ -73,26 +71,26 @@ function ContextualMusic(props) {
         getContextual();
     }, []);
 
-  const handleUpdateSelect = () => {
-    const getSelects = document.querySelectorAll("select");
-    const selectList = {};    
-    for(let i=0;i<getSelects.length;i++){
-      selectList[getSelects[i].name]=getSelects[i].value;
+    const handleUpdateSelect = () => {
+        const getSelects = document.querySelectorAll("select");
+        const selectList = {};
+        for (let i = 0; i < getSelects.length; i++) {
+            selectList[getSelects[i].name] = getSelects[i].value;
+        }
+        setSelectOptions(selectList);
+        console.table(selectList);
     }
-    setSelectOptions(selectList);
-    console.table(selectList);
-  }
 
     return (
         <div className="contex-container gradient-top">
-            <PageTitle title="Música Contextual" />
+            <PageTitle goTo="/home" title="Música Contextual" />
             <div className="dropdown-container">
-                <div className="text-in-context">
+                <div className="text-in-context ani-right-enter">
                     <p>
                         ¿Cuál es la ocasión?
                     </p>
                 </div>
-                <div>
+                <div className="ani-right-enter">
                     {contextualOption.activities.length > 0 && (
                         <Dropdown
                             dropname="Actividades"
@@ -102,12 +100,12 @@ function ContextualMusic(props) {
                         />
                     )}
                 </div>
-                <div className="text-in-context">
+                <div className="text-in-context ani-left-enter">
                     <p>
                         ¿Cómo te sientes?
                     </p>
                 </div>
-                <div>
+                <div className="ani-left-enter">
                     {contextualOption.moods.length > 0 && (
                         <Dropdown
                             dropname="Estado de ánimo"
@@ -117,12 +115,12 @@ function ContextualMusic(props) {
                         />
                     )}
                 </div>
-                <div className="text-in-context">
+                <div className="text-in-context ani-right-enter">
                     <p>
                         ¿Cómo está el clima?
                     </p>
                 </div>
-                <div>
+                <div className="ani-right-enter">
                     {contextualOption.weather.length > 0 && (
                         <Dropdown
                             dropname="Clima"
@@ -132,15 +130,15 @@ function ContextualMusic(props) {
                         />
                     )}
                 </div>
-                <div className="text-in-context">
+                <div className="text-in-context ani-left-enter">
                     <p>Selecciona hasta 3 géneros:</p>
                 </div>
-                <div className="footer-button-container">
+                <div className="footer-button-container ani-left-enter">
                     {contextualOption.genres.map((n) => { return <ButtonFilterTwo changeFunc={refreshChecked} filterId={n.genre_id} txt={capitalCase(n.genre_name)} /> })}
                 </div>
-                <div className="size-general">
+                <div className="size-general ani-right-enter">
 
-                    <OrangeButton isdisabled={(selectedGenres.length>3 || !(selectOptions.mood!="" || selectOptions.activity!="" || selectOptions.weather!="" || selectedGenres.length>0))} txt="Crear Playlist" postLogin={generatePlaylist}/>
+                    <OrangeButton isdisabled={(selectedGenres.length > 3 || !(selectOptions.mood != "" || selectOptions.activity != "" || selectOptions.weather != "" || selectedGenres.length > 0))} txt="Crear Playlist" postLogin={generatePlaylist} />
                 </div>
             </div>
         </div>
