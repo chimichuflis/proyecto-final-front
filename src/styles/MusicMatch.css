@@ -1,4 +1,4 @@
-.music-match{
+.music-match {
   width: 100%;
   margin: 0 auto;
   height: 100vh;
@@ -8,7 +8,8 @@
   padding: 24px 24px 64px;
   overflow: hidden;
 }
-.music-match .playlistbtn{
+
+.music-match .playlistbtn {
   display: block;
   width: 100%;
   max-width: 600px;
@@ -19,14 +20,74 @@
   background-color: #e4e6e8;
   color: #fdfeff;
 }
-.matched-list{
-  list-style: none;
+
+.matched-list {
   display: flex;
-  justify-content: center;
-  gap: 8px;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
 }
-.matched-list img{
-  width: 48px;
-  height: 48px;
+
+.matched-list ul {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  justify-content: center;
+  contain: content;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.matched-list img {
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
+}
+
+.matched-list p {
+  color: #26262E;
+  text-align: center;
+  font-family: Rubik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.button-history-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #FDFEFF;
+}
+
+.button-history-outside {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  right: 0px;
+  top: -20px;
+  box-shadow: 2px 2px 4px 0px rgba(8, 8, 17, 0.08), 0px 0px 6px 0px rgba(8, 8, 17, 0.04);
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
+
+.button-history-inside {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+
+.button-history-inside img {
+  border-radius: 0;
+  padding: 17px;
+}
+
+.match-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

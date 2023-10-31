@@ -26,13 +26,13 @@ function Register() {
     }, [email])
     const registerEmail = () => {
         localStorage.setItem("registerEmail", email)
-        navigate("/RegisterConfirm")
+        navigate("/registerconfirm")
     }
     return (
         <>
             <div className="register-container gradient-top ">
                 <div className="register-wrapper">
-                    <PageTitle title="Crear Cuenta" />
+                    <PageTitle goTo="/" title="Crear Cuenta" />
                     <div className="register-span ani-right-enter">
                         <span>¿Cuál es tu correo electrónico?</span>
                     </div>

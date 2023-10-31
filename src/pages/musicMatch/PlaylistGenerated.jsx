@@ -34,8 +34,8 @@ function PlaylistGenerated() {
       <div className="center-covers">
         <PlaylistCover playlist={newPlaylist.slice(0, 4)} />
       </div>
-      <section className="wrapper-icons-pg">
-        <div className="row-icons">
+      <section className="wrapper-icons-pg ani-left-enter">
+        <div className="row-icons ">
           <img src="/logo-small.svg" alt="" />
           <img id="small-icon1" src="/verified.svg" alt="" />
           <img src="/share.svg" alt="" />
@@ -45,7 +45,7 @@ function PlaylistGenerated() {
           <img id="small-icon2" src="/clock.svg" alt="" />
         </div>
       </section>
-      <section className="wrapper-icons-pg">
+      <section className="wrapper-icons-pg ani-right-enter">
         <div className="row-icons flex-span-start">
           <img src="/copy.svg" alt="" />
           <span>Crear Copia</span>
@@ -55,7 +55,7 @@ function PlaylistGenerated() {
           <img id="btn-play" src="/play-btn.svg" alt="" />
         </div>
       </section>
-      <main>
+      <main className="ani-left-enter">
         <div className="list-songs-pg">
           {newPlaylist.map((item, index) => {
             return (

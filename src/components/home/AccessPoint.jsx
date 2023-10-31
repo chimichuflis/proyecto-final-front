@@ -5,11 +5,11 @@ function AccessPoint(props) {
   const navigate = useNavigate();
   return (
     <>
-      <div className="container-acces">
+      <div className="container-acces" onClick={() => navigate(props.goTo)}>
         <div className="images">
           <img className="acces-img" src={props.img} alt="" />
         </div>
-        <div className="article" onClick={() => navigate(props.goTo)}>
+        <div className="article" >
           <h3>{props.title}</h3>
           <span>{props.text}</span>
         </div>
