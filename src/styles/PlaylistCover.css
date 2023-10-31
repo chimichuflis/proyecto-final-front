@@ -1,8 +1,10 @@
 .wrapper-playlist-cover {
   width: 152px;
+  border-radius: 0 40px 0 40px;
 }
 .wrapper-playlist-cover-pg {
   width: 224px;
+  border-radius: 0 40px 0 40px;
 }
 .wrapper-imgs-playlist-cover {
   height: 152px;
@@ -10,6 +12,7 @@
   border-radius: 0 40px 0 40px;
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .wrapper-imgs-playlist-cover-pg {
   height: 224px;
@@ -17,6 +20,7 @@
   border-radius: 0 40px 0 40px;
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .wrapper-imgs-playlist-cover img {
   width: 76px;
@@ -26,12 +30,12 @@
   width: 112px;
   height: 112px;
 }
-#border1 {
+/* #border1 {
   border-radius: 0 40px 0 0;
 }
 #border2 {
   border-radius: 0 0 0 40px;
-}
+} */
 .cover-name {
   margin-top: 16px;
   display: flex;

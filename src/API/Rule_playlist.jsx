@@ -1,8 +1,8 @@
 import API from "./API_rules";
 
-export const playlists = async (value) => {
-  let url = "/playlists";
-  return await API.get(url, { value: value })
+export const playlists = async (queryParam) => {
+  let url = "/playlist";
+  return await API.get(url + queryParam)
     .then((resultado) => {
       return resultado.data;
     })

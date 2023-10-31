@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
 import Input from "../../components/Input";
 import OrangeButton from "../../components/OrangeButton";
-import CreateBy from "./CreateBy";
 
 function CreatePlaylist() {
   const [playlistOk, setPlaylistOk] = useState(false);

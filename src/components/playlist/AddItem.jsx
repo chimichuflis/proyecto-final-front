@@ -18,9 +18,9 @@ function AddItem(props) {
       <div>
         <img
           src={
-            location.pathname == "/playlistgenerated"
-              ? "options.svg"
-              : "crossAdd.svg"
+            location.pathname.indexOf("playlistgenerated") >= 0
+              ? "/options.svg"
+              : "/crossAdd.svg"
           }
           alt=""
         />
