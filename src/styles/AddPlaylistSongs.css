@@ -1,0 +1,11 @@
+.wrapper-add-playlist-songs {
+  padding: 24px;
+}
+
+.bar-padding {
+  padding: 24px 0;
+}
+.filters-buttons-add {
+  display: flex;
+  gap: 12px;
+}

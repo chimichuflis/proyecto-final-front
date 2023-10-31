@@ -41,6 +41,7 @@
 .main-by {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .center-title-by {
   display: flex;
