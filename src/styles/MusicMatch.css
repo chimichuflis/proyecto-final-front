@@ -19,3 +19,14 @@
   background-color: #e4e6e8;
   color: #fdfeff;
 }
+.matched-list{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.matched-list img{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
