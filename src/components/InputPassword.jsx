@@ -1,9 +1,6 @@
 import "../styles/Input.css"
 import { useState } from "react";
 
-
-
-
 function InputPassword(props) {
     const validation = (e) => {
         props.validation(e.target.value.length > 7)

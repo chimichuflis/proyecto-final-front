@@ -1,19 +1,21 @@
 .match-carousel{
   max-width: 480px;
+  width:85%;
   margin: 0 auto;
 }
 .match-carousel ul{
   list-style: none;
   position: relative;
   width: 100%;
+  aspect-ratio:1;
   padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .match-carousel li{
-  margin: 24px;
-  position: relative;
+  position: absolute;
+  width:100%;
 }
 .match-carousel li img{
   width: 100%;
@@ -21,23 +23,20 @@
 }
 
 .match-carousel .next-match{
-  margin-top: -30%;
-  margin-bottom: -65%;
+  top: -30%;
   left: 35%;
   transform: rotate(10.45deg) scale(0.75);
   opacity: 0.5;
   z-index: -10;
-  animation: nextmatch 2s;
+  animation: nextmatch 1s;
 }
 .match-carousel .to-match{
   top: 0;
   left: 0;
-  animation: tomatch 2s;
+  animation: tomatch 1s;
 }
 .match-carousel .prev-match{
-  right: 200%;
-  margin-top: -65%;
-  margin-bottom: -30%;
+  left: 200%;
 }
 @keyframes nextmatch{
   0%{
@@ -48,7 +47,8 @@
 }
 @keyframes tomatch{
   0%{
-    top: -10%;
+    opacity:0.5;
+    top: -30%;
     left: 35%;
     transform: rotate(10.45deg) scale(0.75);
   }
