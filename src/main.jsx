@@ -17,6 +17,7 @@ import Settings from "./pages/profile/Settings.jsx";
 import CreatePlaylist from "./pages/playlist/CreatePlaylist.jsx";
 import CreateBy from "./pages/playlist/CreateBy.jsx";
 import AddPlaylistSongs from "./pages/playlist/AddPlaylistSongs.jsx";
+import PlaylistGenerated from "./pages/musicMatch/PlaylistGenerated.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/match",
     element: <MusicMatch />,
+  },
+  {
+    path: "/playlistgenerated",
+    element: <PlaylistGenerated />,
   },
   {
     path: "/login",

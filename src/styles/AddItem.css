@@ -4,15 +4,21 @@
   flex: 1 1;
   justify-content: space-between;
 }
+.container-without-cross {
+  display: flex;
+  align-items: center;
+  flex: 1 1;
+}
 .img-item-add img {
   height: 48px;
   width: 48px;
 }
-.wrapper-title-artist {
+.wrapper-title-artist-add {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   padding-left: 15px;
+  align-items: flex-start;
 }
 .wrapper-title-artist-add h4 {
   font-size: 14px;
@@ -22,8 +28,4 @@
 .subtitle-item-add {
   color: #838486;
   font-size: 12px;
-  display: flex;
-}
-.name-item-add {
-  padding-right: 5px;
 }

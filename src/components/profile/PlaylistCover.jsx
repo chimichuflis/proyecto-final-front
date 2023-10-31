@@ -1,18 +1,30 @@
 import React from "react";
 import "../../styles/PlaylistCover.css";
 
-function PlaylistCover() {
+function PlaylistCover(props) {
   return (
-    <div className="wrapper-playlist-cover">
-      <div className="wrapper-imgs-playlist-cover">
-        <img src="/artists/1.jpeg" alt="" />
-        <img id="border1" src="/artists/2.jpeg" alt="" />
-        <img id="border2" src="/artists/4.jpeg" alt="" />
-        <img src="/artists/3.jpeg" alt="" />
+    <div
+      className={
+        location.pathname == "/playlistgenerated"
+          ? "wrapper-playlist-cover-pg"
+          : "wrapper-playlist-cover"
+      }
+    >
+      <div
+        className={
+          location.pathname == "/playlistgenerated"
+            ? "wrapper-imgs-playlist-cover-pg"
+            : "wrapper-imgs-playlist-cover"
+        }
+      >
+        <img src={props.img1} alt="" />
+        <img id="border1" src={props.img2} alt="" />
+        <img id="border2" src={props.img3} alt="" />
+        <img src={props.img4} alt="" />
       </div>
       <div className="cover-name">
-        <span>playlist_name</span>
-        <span className="song-artist">name</span>
+        <span></span>
+        <span className="song-artist"></span>
       </div>
     </div>
   );
