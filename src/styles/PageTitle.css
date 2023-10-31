@@ -18,5 +18,17 @@
   font-weight: 500;
   flex-grow: 100;
   text-align: center;
-  padding-right: 24px;
+  padding-top: 8px;
+}
+.page-title span {
+  font-size: 12px;
+  font-weight: 400;
+  flex-grow: 100;
+  text-align: center;
+  color: #26262e;
+}
+.page-title div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 100;
 }
