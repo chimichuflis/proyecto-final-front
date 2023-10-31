@@ -2,7 +2,7 @@
     display: flex;
     width: 320px;
     height: 48px;
-    padding: 0px 16px;
+
     justify-content: flex-end;
     align-items: center;
     border-radius: 0px 16px;
@@ -20,4 +20,21 @@
     line-height: 24px;
     letter-spacing: 0.5px;
     border: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("/chevron.svg");
+    background-repeat: no-repeat;
+    background-position: 97%;
+    padding: 0px 16px;
 }
+
+.dropdown-header:focus-within,
+.dropdown-header:hover {
+    background-image: url("/chevron-inv.png");
+    outline: none;
+}
+
+/* .dropdown-header::before {
+    content: "uwuaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+} */

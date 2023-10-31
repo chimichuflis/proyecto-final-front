@@ -16,6 +16,7 @@ import Profile from "./pages/profile/Profile.jsx";
 import Settings from "./pages/profile/Settings.jsx";
 import CreatePlaylist from "./pages/playlist/CreatePlaylist.jsx";
 import CreateBy from "./pages/playlist/CreateBy.jsx";
+import AddPlaylistSongs from "./pages/playlist/AddPlaylistSongs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
   {
     path: "/createplaylist/createby",
     element: <CreateBy />,
+  },
+  {
+    path: "/addsongs",
+    element: <AddPlaylistSongs />,
   },
   {
     path: "/settings",
