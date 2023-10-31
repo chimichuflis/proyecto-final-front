@@ -20,13 +20,18 @@
   color: #fdfeff;
 }
 .matched-list{
-  list-style: none;
+  border:1px solid red;
   display: flex;
-  justify-content: center;
+
+}
+.matched-list ul{
+  display: flex;
   gap: 8px;
+  justify-content: center;
+  list-style: none;
 }
 .matched-list img{
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
 }

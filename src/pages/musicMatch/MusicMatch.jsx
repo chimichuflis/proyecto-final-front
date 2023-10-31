@@ -41,7 +41,8 @@ export default function(){
       <PageTitle title="Cupido Musical" goTo="/home"/>
       <MatchCarousel func={likeDislike} list={[...matchList]}/>
       
-      <ul className="matched-list">
+      <div className="matched-list">
+      <ul>
       {likedList.map((goodMatch,index)=>{
         return(
           <li key={index}>
@@ -52,5 +53,6 @@ export default function(){
       </ul>
       
       <button className="playlistbtn" >Crear Playlist</button>
+      </div>
     </div>)
 }
