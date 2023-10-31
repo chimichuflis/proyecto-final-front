@@ -32,7 +32,7 @@ function PlaylistGenerated() {
         subtitle="Generada del Cupido Musical"
       />
       <div className="center-covers">
-        <PlaylistCover playlist={newPlaylist.slice(0, 3)} />
+        <PlaylistCover playlist={newPlaylist.slice(0, 4)} />
       </div>
       <section className="wrapper-icons-pg">
         <div className="row-icons">

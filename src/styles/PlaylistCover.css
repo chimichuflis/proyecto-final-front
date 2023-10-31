@@ -25,17 +25,13 @@
 .wrapper-imgs-playlist-cover img {
   width: 76px;
   height: 76px;
+  display: flex;
 }
 .wrapper-imgs-playlist-cover-pg img {
   width: 112px;
   height: 112px;
+  display: flex;
 }
-/* #border1 {
-  border-radius: 0 40px 0 0;
-}
-#border2 {
-  border-radius: 0 0 0 40px;
-} */
 .cover-name {
   margin-top: 16px;
   display: flex;

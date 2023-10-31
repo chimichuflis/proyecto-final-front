@@ -10,20 +10,21 @@ function PlaylistCover({ playlist }) {
           : "wrapper-playlist-cover"
       }
     >
-      {playlist.map((item, index) => {
-        return (
-          <div
-            key={index}
-            className={
-              location.pathname == "/playlistgenerated"
-                ? "wrapper-imgs-playlist-cover-pg"
-                : "wrapper-imgs-playlist-cover"
-            }
-          >
-            <img src={`/artists/${item.artist_id}.jpeg`} alt="" />
-          </div>
-        );
-      })}
+      <div
+        className={
+          location.pathname == "/playlistgenerated"
+            ? "wrapper-imgs-playlist-cover-pg"
+            : "wrapper-imgs-playlist-cover"
+        }
+      >
+        {playlist.map((item, index) => {
+          return (
+            <div key={index}>
+              <img src={`/artists/${item.artist_id}.jpeg`} alt="" />
+            </div>
+          );
+        })}
+      </div>
       <div className="cover-name">
         <span></span>
         <span className="song-artist"></span>
