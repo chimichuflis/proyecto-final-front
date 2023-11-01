@@ -19,7 +19,7 @@ function ContextualMusic(props) {
         { name: "mood", value: "" },
         { name: "weather", value: "" }
     ]);
-    const [selectedGenres, setSelectedGenres] = useState([])
+    const [selectedGenres, setSelectedGenres] = useState([]);
 
     const capitalCase = (str) => {
         if (str) {
@@ -31,21 +31,20 @@ function ContextualMusic(props) {
         }
     };
 
-    const makePlaylist = async () => {
-        const obj = {}
-        selectOptions.forEach(n => {
-            obj[n.name] = n.value;
+  const makePlaylist = async ()=>{
+      try{
+        const response = await createContextualPlaylistApi({
+            activity:selectOptions.activity,
+            mood:selectOptions.mood,
+            weather:selectOptions.weather,
+            genre:selectedGenres
         });
-        obj.genre = selectedGenres;
-        try {
-            const response = await createContextualPlaylistApi(obj)
-            console.log(response);
-        }
-        catch (err) {
-            console.log(err);
-        }
-        //req.body = { activity: int, mood: int, weather: int, genre: [int,...] }
-    }
+        console.log(response);
+      }
+      catch(err){
+        console.log(err);
+      }
+  }
 
     const generatePlaylist = () => {
         makePlaylist({ activity: selectOptions.activity });
