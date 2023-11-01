@@ -34,7 +34,7 @@ const router = createBrowserRouter([
     element: <MusicMatch />,
   },
   {
-    path: "/playlistgenerated",
+    path: "/playlistgenerated/:id",
     element: <PlaylistGenerated />,
   },
   {

@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/PlaylistCover.css";
 
-function PlaylistCover(props) {
+function PlaylistCover({ playlist }) {
   return (
     <div
       className={
@@ -17,10 +17,13 @@ function PlaylistCover(props) {
             : "wrapper-imgs-playlist-cover"
         }
       >
-        <img src={props.img1} alt="" />
-        <img id="border1" src={props.img2} alt="" />
-        <img id="border2" src={props.img3} alt="" />
-        <img src={props.img4} alt="" />
+        {playlist.map((item, index) => {
+          return (
+            <div key={index}>
+              <img src={`/artists/${item.artist_id}.jpeg`} alt="" />
+            </div>
+          );
+        })}
       </div>
       <div className="cover-name">
         <span></span>

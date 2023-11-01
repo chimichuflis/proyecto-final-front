@@ -1,23 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import PlaylistCover from "../../components/profile/PlaylistCover";
 import "../../styles/PlaylistGenerated.css";
 import AddItem from "../../components/playlist/AddItem";
 import NavBar from "../../components/home/NavBar";
 import PageTitle from "../../components/PageTitle";
+import { playlists } from "../../API/Rule_playlist";
+
 function PlaylistGenerated() {
+  const [newPlaylist, setNewPlaylist] = useState([]);
+  const { id } = useParams();
+
+  useEffect(() => {
+    const getPLaylists = async () => {
+      try {
+        const response = await playlists(`/${id}`);
+        console.log(response);
+        setNewPlaylist(response);
+        console.log(newPlaylist);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getPLaylists();
+  }, []);
+
   return (
     <div className="wrapper-playlist-generated gradient-top">
       <PageTitle
         title="Playlist Generada"
         subtitle="Generada del Cupido Musical"
       />
-      <div className="center-covers ani-right-enter">
-        <PlaylistCover
-          img1="/artists/1.jpeg"
-          img2="/artists/2.jpeg"
-          img3="/artists/3.jpeg"
-          img4="/artists/4.jpeg"
-        />
+      <div className="center-covers">
+        <PlaylistCover playlist={newPlaylist.slice(0, 4)} />
       </div>
       <section className="wrapper-icons-pg ani-left-enter">
         <div className="row-icons ">
@@ -42,13 +57,17 @@ function PlaylistGenerated() {
       </section>
       <main className="ani-left-enter">
         <div className="list-songs-pg">
-          <div item-pg>
-            <AddItem
-              img="/artists/1.jpeg"
-              title="Cancion de playlist"
-              name="artista"
-            />
-          </div>
+          {newPlaylist.map((item, index) => {
+            return (
+              <div item-pg>
+                <AddItem
+                  img={`/artists/${item.artist_id}.jpeg`}
+                  title={item.song_name}
+                  name={item.artist_name}
+                />
+              </div>
+            );
+          })}
         </div>
       </main>
       <NavBar />
