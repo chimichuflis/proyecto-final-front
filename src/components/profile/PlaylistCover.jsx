@@ -17,7 +17,7 @@ function PlaylistCover({ playlist }) {
             : "wrapper-imgs-playlist-cover"
         }
       >
-        {playlist.map((item, index) => {
+        {playlist?.map((item, index) => {
           return (
             <div key={index}>
               <img src={`/artists/${item.artist_id}.jpeg`} alt="" />
