@@ -5,19 +5,19 @@ function PlaylistCover({ playlist }) {
   return (
     <div
       className={
-        location.pathname == "/playlistgenerated"
+        location.pathname.indexOf("playlistgenerated") >= 0
           ? "wrapper-playlist-cover-pg"
           : "wrapper-playlist-cover"
       }
     >
       <div
         className={
-          location.pathname == "/playlistgenerated"
+          location.pathname.indexOf("playlistgenerated") >= 0
             ? "wrapper-imgs-playlist-cover-pg"
             : "wrapper-imgs-playlist-cover"
         }
       >
-        {playlist.map((item, index) => {
+        {playlist?.map((item, index) => {
           return (
             <div key={index}>
               <img src={`/artists/${item.artist_id}.jpeg`} alt="" />

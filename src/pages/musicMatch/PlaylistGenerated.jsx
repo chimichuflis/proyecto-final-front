@@ -28,7 +28,7 @@ function PlaylistGenerated() {
   return (
     <div className="wrapper-playlist-generated gradient-top">
       <PageTitle
-        title="Playlist Generada"
+        title={newPlaylist.slice(0).playlist_name}
         subtitle="Generada del Cupido Musical"
       />
       <div className="center-covers">

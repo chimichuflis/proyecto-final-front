@@ -10,3 +10,14 @@ export const playlists = async (queryParam) => {
       throw error.response.data.error;
     });
 };
+
+export const createPlaylists = async (user_id, playlist_name) => {
+  let url = "/playlist/create";
+  return await API.post(url, { user_id: user_id, playlist_name: playlist_name })
+    .then((resultado) => {
+      return resultado.data;
+    })
+    .catch((error) => {
+      throw error.response.data.error;
+    });
+};
