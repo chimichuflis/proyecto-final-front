@@ -5,14 +5,14 @@ function PlaylistCover({ playlist }) {
   return (
     <div
       className={
-        location.pathname == "/playlistgenerated"
+        location.pathname.indexOf("playlistgenerated") >= 0
           ? "wrapper-playlist-cover-pg"
           : "wrapper-playlist-cover"
       }
     >
       <div
         className={
-          location.pathname == "/playlistgenerated"
+          location.pathname.indexOf("playlistgenerated") >= 0
             ? "wrapper-imgs-playlist-cover-pg"
             : "wrapper-imgs-playlist-cover"
         }
