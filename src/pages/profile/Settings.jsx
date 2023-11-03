@@ -2,8 +2,16 @@ import React from "react";
 import PageTitle from "../../components/PageTitle";
 import "../../styles/Settings.css";
 import OrangeButton from "../../components/OrangeButton";
+import { useNavigate } from 'react-router-dom';
+
 
 function Settings() {
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+    console.log(localStorage)
+  };
   return (
     <div className="gradient-top wrapper-settings ">
       <div>
@@ -18,7 +26,7 @@ function Settings() {
           <span className="center-version">Versión: V1.25.03</span>
         </div>
         <footer className="footer-settings">
-          <span>Cerrar Sesion</span>
+          <span onClick={handleLogout}>Cerrar Sesion</span>
         </footer>
       </div>
     </div>
