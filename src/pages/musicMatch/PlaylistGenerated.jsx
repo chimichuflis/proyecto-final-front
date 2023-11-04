@@ -10,7 +10,7 @@ import { playlists } from "../../API/Rule_playlist";
 function PlaylistGenerated() {
   const [newPlaylist, setNewPlaylist] = useState([]);
   const { id } = useParams();
-
+  const initialValue = 0;
   useEffect(() => {
     const getPLaylists = async () => {
       try {
@@ -24,6 +24,15 @@ function PlaylistGenerated() {
     };
     getPLaylists();
   }, []);
+
+  const durationSong = () => {
+    const result = newPlaylist.reduce((accumulator, song) => {
+      return accumulator + song.song_duration;
+    }, initialValue);
+    return result >= 3600
+      ? `${Math.floor(result / 3600)}h ${Math.floor(result / 60)}m`
+      : ` ${Math.floor(result / 60)}m ${result % 60}s`;
+  };
 
   return (
     <div className="wrapper-playlist-generated gradient-top">
@@ -40,8 +49,9 @@ function PlaylistGenerated() {
           <img id="small-icon1" src="/verified.svg" alt="" />
           <img src="/share.svg" alt="" />
         </div>
+
         <div className="row-icons flex-span">
-          <span>1h 19m</span>
+          <span>{durationSong()}</span>
           <img id="small-icon2" src="/clock.svg" alt="" />
         </div>
       </section>
