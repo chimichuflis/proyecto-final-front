@@ -8,3 +8,13 @@ export const getMatches = async () => {
   } catch (err) { console.log(err) }
 };
 
+export const createMatchPlaylistApi = async (body) => {
+    let url = "/match/newplaylist";
+    return await API.post(url,body)
+        .then((resultado) => {
+            return resultado.data;
+        })
+        .catch((error) => {
+            throw error.response.data.error;
+        });
+};

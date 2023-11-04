@@ -1,4 +1,4 @@
-import { getMatches } from "../../API/Rule_Match.jsx";
+import { getMatches, createMatchPlaylistApi } from "../../API/Rule_Match.jsx";
 import PageTitle from "../../components/PageTitle.jsx";
 import MatchCarousel from "./MatchCarousel.jsx";
 import { useState, useEffect } from "react";
@@ -40,6 +40,21 @@ export default function () {
     setMatchList(matchList.slice(1));
   }
 
+  const makePlaylist = async ()=>{
+    try{
+      const response = await createMatchPlaylistApi({artists:likedList});
+      if(response.pass){
+        console.log("new playlist created", response.playlist_id)
+        navigate(`/playlistgenerated/${response.playlist_id}`);
+      }else{
+        console.log("no se encontraron canciones!!")
+      }
+    }
+    catch(err){
+      console.log(err);
+    }
+  }
+
   return (
     <div className="music-match gradient-top">
       <PageTitle title="Cupido Musical" goTo="/home" />
@@ -67,7 +82,7 @@ export default function () {
       </div>
 
       <div className="match-button-container ani-left-enter">
-        <OrangeButton txt="Crear Playlist" />
+        <OrangeButton isdisabled={(likedList.length==0)} txt="Crear Playlist" postLogin={makePlaylist}/>
       </div>
     </div>)
 }
