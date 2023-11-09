@@ -59,3 +59,8 @@
   display: flex;
   flex: 1 1;
 }
+.main-playlist-wrap {
+  max-height: 600px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}

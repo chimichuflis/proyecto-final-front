@@ -65,7 +65,7 @@ function PlaylistGenerated() {
           <img id="btn-play" src="/play-btn.svg" alt="" />
         </div>
       </section>
-      <main className="ani-left-enter">
+      <main className="ani-left-enter ,main-playlist-wrap">
         <div className="list-songs-pg">
           {newPlaylist.map((item, index) => {
             return (
