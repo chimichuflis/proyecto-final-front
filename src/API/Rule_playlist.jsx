@@ -1,5 +1,16 @@
 import API from "./API_rules";
 
+export const allPlaylists = async () => {
+  let url = "/playlists";
+  return await API.get(url)
+    .then((resultado) => {
+      return resultado.data;
+    })
+    .catch((error) => {
+      throw error.response.data.error;
+    });
+};
+
 export const playlists = async (queryParam) => {
   let url = "/playlist";
   return await API.get(url + queryParam)

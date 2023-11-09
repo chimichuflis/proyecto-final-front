@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../../components/home/NavBar";
 import "../../styles/Profile.css";
 import PlaylistCover from "../../components/profile/PlaylistCover";
 import { Link } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
+import { allPlaylists } from "../../API/Rule_playlist";
 
 function Profile() {
   const token = localStorage.getItem("token");
   const payload = jwtDecode(token);
   console.log(payload);
+  const [ownPlaylists, setOwnPlaylists] = useState([]);
 
+  useEffect(() => {
+    const getPLaylists = async () => {
+      try {
+        const response = await allPlaylists();
+        console.log(response);
+        setOwnPlaylists(response);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getPLaylists();
+  }, []);
+  console.log(ownPlaylists, "aca");
   return (
     <div className="gradient-top wrapper-profile">
       <header>
@@ -37,8 +52,15 @@ function Profile() {
             </label>
           </Link>
         </div>
-        <div>
-          <PlaylistCover />
+
+        <div className="wrap-covers-profile">
+          {ownPlaylists.map((item, index) => {
+            return (
+              <Link link to={`/playlistgenerated/${item.playlist_id}`}>
+                <PlaylistCover key={item.playlist_id} id={item.playlist_id} />
+              </Link>
+            );
+          })}
         </div>
       </main>
       <NavBar />

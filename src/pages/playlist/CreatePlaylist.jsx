@@ -25,7 +25,7 @@ function CreatePlaylist() {
       }
     }
     createNewPlaylist(playlistName, payload.id);
-  }, [playlistName]);
+  }, []);
   const handleClick = () => {
     navigate("/createplaylist/createby");
   };

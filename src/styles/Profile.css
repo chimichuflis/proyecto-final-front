@@ -66,3 +66,12 @@
 .btn-create-playlist input {
   appearance: none;
 }
+.wrap-covers-profile {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  max-height: 600px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}

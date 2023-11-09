@@ -37,11 +37,11 @@ function PlaylistGenerated() {
   return (
     <div className="wrapper-playlist-generated gradient-top">
       <PageTitle
-        title={newPlaylist.slice(0).playlist_name}
+        title={newPlaylist.playlist_name}
         subtitle="Generada del Cupido Musical"
       />
       <div className="center-covers">
-        <PlaylistCover playlist={newPlaylist.slice(0, 4)} />
+        <PlaylistCover id={id} />
       </div>
       <section className="wrapper-icons-pg ani-left-enter">
         <div className="row-icons ">

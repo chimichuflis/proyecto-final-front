@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/PlaylistCover.css";
+import { playlists } from "../../API/Rule_playlist";
 
-function PlaylistCover({ playlist }) {
+function PlaylistCover({ id }) {
+  const [playlist, setPlaylist] = useState([]);
+  console.log(playlist);
+
+  useEffect(() => {
+    const getPLaylists = async () => {
+      try {
+        const response = await playlists(`/${id}`);
+        console.log(response);
+        response > [1] && setPlaylist(response);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getPLaylists();
+  }, []);
+
   return (
     <div
       className={
@@ -17,7 +34,7 @@ function PlaylistCover({ playlist }) {
             : "wrapper-imgs-playlist-cover"
         }
       >
-        {playlist?.map((item, index) => {
+        {playlist.slice(0, 4).map((item, index) => {
           return (
             <div key={index}>
               <img src={`/artists/${item.artist_id}.jpeg`} alt="" />
