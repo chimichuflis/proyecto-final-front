@@ -4,9 +4,10 @@ import MatchCarousel from "./MatchCarousel.jsx";
 import { useState, useEffect } from "react";
 import "../../styles/MusicMatch.css";
 import OrangeButton from "../../components/OrangeButton.jsx";
+import { useNavigate } from "react-router-dom";
 
 export default function () {
-
+  const navigate = useNavigate();
   const [matchList, setMatchList] = useState([]);
   const [likedList, setLikedList] = useState([]);
   const clearLikedList = () => {
@@ -42,7 +43,9 @@ export default function () {
 
   const makePlaylist = async ()=>{
     try{
-      const response = await createMatchPlaylistApi({artists:likedList});
+      const artistQuery=likedList.map(n=>n.artist_id);
+      const response = await createMatchPlaylistApi({artists:artistQuery});
+      console.log(response);
       if(response.pass){
         console.log("new playlist created", response.playlist_id)
         navigate(`/playlistgenerated/${response.playlist_id}`);

@@ -9,7 +9,7 @@ export const getMatches = async () => {
 };
 
 export const createMatchPlaylistApi = async (body) => {
-    let url = "/match/newplaylist";
+    let url = "/match/playlist";
     return await API.post(url,body)
         .then((resultado) => {
             return resultado.data;
