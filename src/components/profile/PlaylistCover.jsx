@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../../styles/PlaylistCover.css";
 import { playlists } from "../../API/Rule_playlist";
 
-function PlaylistCover({ id }) {
+function PlaylistCover({ id, name }) {
   const [playlist, setPlaylist] = useState([]);
   console.log(playlist);
 
@@ -43,7 +43,7 @@ function PlaylistCover({ id }) {
         })}
       </div>
       <div className="cover-name">
-        <span></span>
+        <span>{name}</span>
         <span className="song-artist"></span>
       </div>
     </div>

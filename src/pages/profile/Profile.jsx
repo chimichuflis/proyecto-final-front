@@ -56,8 +56,16 @@ function Profile() {
         <div className="wrap-covers-profile">
           {ownPlaylists.map((item, index) => {
             return (
-              <Link link to={`/playlistgenerated/${item.playlist_id}`}>
-                <PlaylistCover key={item.playlist_id} id={item.playlist_id} />
+              <Link
+                className="appearence-none"
+                link
+                to={`/playlistgenerated/${item.playlist_id}`}
+              >
+                <PlaylistCover
+                  key={item.playlist_id}
+                  id={item.playlist_id}
+                  name={item.playlist_name}
+                />
               </Link>
             );
           })}
