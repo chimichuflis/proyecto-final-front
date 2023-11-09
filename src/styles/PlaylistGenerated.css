@@ -54,6 +54,9 @@
   flex-direction: column;
   padding-top: 24px;
   gap: 8px;
+  max-height: 400px;
+  overflow-y: scroll;
+  scrollbar-width: none;
 }
 .item-pg {
   display: flex;
