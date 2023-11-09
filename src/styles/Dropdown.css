@@ -23,6 +23,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    background-color: transparent;
     background-image: url("/chevron.svg");
     background-repeat: no-repeat;
     background-position: 97%;

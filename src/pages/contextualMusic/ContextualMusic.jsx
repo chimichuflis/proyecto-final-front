@@ -6,8 +6,10 @@ import { createContextualPlaylistApi, contextualApi } from "../../API/Rule_Conte
 import ButtonFilter from "../../components/ButtonFilter";
 import ButtonFilterTwo from "../../components/ButtonFilterTwo";
 import OrangeButton from "../../components/OrangeButton";
+import { Link, useNavigate } from "react-router-dom";
 
 function ContextualMusic(props) {
+    const navigate = useNavigate();
     const [contextualOption, setContextualOption] = useState({
         activities: [],
         moods: [],
@@ -39,7 +41,12 @@ function ContextualMusic(props) {
             weather:selectOptions.weather,
             genre:selectedGenres
         });
-        console.log(response);
+        if(response.pass){
+            console.log("new playlist created", response.playlist_id)
+            navigate(`/playlistgenerated/${response.playlist_id}`);
+        }else{
+            console.log("no hay canciones para este contexto")
+          }
       }
       catch(err){
         console.log(err);
